@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 
 class LeagueTableRow extends Component {
+
   render() {
+    const { standing } = this.props
     const styles = {
       row: {
         display: 'flex',
         flexDirection: 'row',
-        backgroundColor: `${({ position }) =>
-          position === 1
-            ? "#FF0047"
-            : position < 5 ? "#E10040" : position > 17 ? "#8A0036" : "#AB0039"
-          }`
+        backgroundColor: '',
       },
       position: {
         padding: '.5em',
@@ -33,15 +31,14 @@ class LeagueTableRow extends Component {
         borderLeft: 0,
       }
     }
-    const { standing } = this.props
     return (
       <div>
         {
         standing.map((standings, key) =>
           <div key={'standings_' + key}>
-            <div style={styles.row} position={standings.position}>
+            <div style={styles.row} >
               <div style={styles.position}>
-                {standings.position}
+                  {standings.position}
               </div>
               <div style={styles.teams}>
                 {standings.teamName}

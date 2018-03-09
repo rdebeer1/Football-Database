@@ -20,7 +20,6 @@ class App extends Component {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
           this.setState({
           leagueTable: {
             leagueCaption: data.leagueCaption,
@@ -28,6 +27,7 @@ class App extends Component {
           },
           standing: data.standing
         })
+        console.log(this.state.standing)
       })
   }
   render() {
