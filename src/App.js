@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LeagueTableRow from './LeagueTableRow';
+import Header from './Header';
 import './App.css';
 // const db = require('../database/index.js');
 
@@ -33,12 +34,44 @@ class App extends Component {
   render() {
     const { leagueTable } = this.state
     const { standing } = this.state
+    const styles = {
+      container: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: '',
+        backgroundSize: '',
+        fontFamily: 'Premier League',
+        fontWeight: 300,
+        padding: '5em 0',
+        minHeight: 'calc(100vh - 10em)'
+      },
+      tableWrap: {
+        textAlign: 'center',
+        backgroundColor: '#360037',
+        color: '#fff',
+        borderRadius: '3px'
+      },
+      league: {
+        fontSize: '2em',
+        margin: 0,
+      },
+      matchday: {
+        fontSize: '1em',
+        margin: 2,
+      }
+    }
     return (
       <div className="App">
-        <h1>{leagueTable.leagueCaption}</h1>
-          <h2>{leagueTable.matchday}</h2>
-            <LeagueTableRow standing={standing}/>
+        <div style={styles.container}>
+          <div style={styles.tableWrap}>
+            <div style={styles.league}>{leagueTable.leagueCaption}</div>
+            <div style={styles.matchday}> Matchday: {leagueTable.matchday}</div>
+            <Header />
+              <LeagueTableRow standing={standing}/>
           </div>
+        </div>
+      </div>
     ); 
   }
 }
