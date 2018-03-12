@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-
+import Header from './Header'
 class LeagueTableRow extends Component {
   render() {
     const { standing } = this.props
     const styles = {
+      table: {
+        overflow: 'scroll',
+        height: '90vh',
+      },
       positionFirst: {
         display: 'flex',
         flexDirection: 'row',
@@ -27,7 +31,7 @@ class LeagueTableRow extends Component {
       position: {
         padding: '.5em',
         borderBottom: 'solid #360037 1px',
-        width: '2em',
+        width: '2.2em',
       },
       teams: {
         padding: '.5em',
@@ -38,7 +42,7 @@ class LeagueTableRow extends Component {
       number: {
         boxSizing: 'content-box',
         padding: '.5em',
-        width: '2em',
+        width: '2.2em',
         border: 'solid #360037 1px',
         borderTop: 0,
         borderRight: 0,
@@ -46,10 +50,13 @@ class LeagueTableRow extends Component {
       },
       crest: {
         height: '1em',
+        paddingRight: '.5em'
       },
     }
     return (
-      <div>
+    <div>
+      <Header />
+      <div style={styles.table}>
         {
         standing.map((standings, key) =>
           <div key={'standings_' + key}>
@@ -187,6 +194,7 @@ class LeagueTableRow extends Component {
           )
         }
       </div>
+     </div>
     )
   }
 }
