@@ -35,6 +35,7 @@ class App extends Component {
           },
           standing: data.standing
         })
+        console.log(this.state.standing)
       })
     }
 
@@ -120,7 +121,7 @@ class App extends Component {
         color: '#fff',
         width: '100%',
         flex: 1,
-        padding: '1em'
+        padding: '1em',
         
       },
       matchday: {
@@ -136,6 +137,11 @@ class App extends Component {
         bottom: '.5em',
         margin: '0 .1em'
       },
+      crest: {
+        height: '1.5em',
+        width: '1.5em',
+        padding: '.25em',
+      }
     }
     return (
       <div className="App">
@@ -144,6 +150,13 @@ class App extends Component {
            <div> {leagueTable.leagueCaption} </div>
             <LeagueLogo style={styles.logo} />
             <div style={styles.matchday}> Matchday: {leagueTable.matchday}</div>
+            {
+            standing.map((crest, key) =>
+            <span key={'crest_' + key}> 
+              <img style={styles.crest} src={crest.crestURI} alt = ''/>
+            </span>
+            )
+           }
           </div>
           <div style={styles.tableWrap}>
             <LeagueTableRow standing={standing}/>
