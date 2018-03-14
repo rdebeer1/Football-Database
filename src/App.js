@@ -3,39 +3,58 @@ import LeagueTableRow from './LeagueTableRow';
 import LeagueLogo from './LeagueLogo'
 import Fixtures from './Fixtures'
 import './App.css';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Dialog from 'material-ui/Dialog';
 const config = require('./config.js');
-// const db = require('../database/index.js');
 
+// const db = require('../database/index.js');
 
 class App extends Component {
     state = {
       leagueTable: [],
       standing: [],
       fixtures: [],
+      teams: [],
+      open: false,
   }
   componentDidMount() {
     this.getLeagueTable();
     this.getLeagueFixtures();
   }
+  componentWillUpdate() {
+    this.getTeamPlayers()
+  }
+ 
+  handleOpen = () => {
+    this.setState({ open: true });
+  };
 
+  handleClose = () => {
+    this.setState({ open: false });
+  };
 
   getLeagueTable = () => {
     fetch('http://api.football-data.org/v1/soccerseasons/445/leagueTable', {
       headers: {
         'X-Auth-Token': `${config.MY_API_TOKEN}`,
-        'X-Response-Control': 'full'
       }
     })
       .then((response) => response.json())
       .then((data) => {
+        let teams = []
+        data.standing.map((team) => {
+          teams.push(team._links.team.href)
+          return team;
+        })
           this.setState({
           leagueTable: {
             leagueCaption: data.leagueCaption,
             matchday: data.matchday,
           },
-          standing: data.standing
+          standing: data.standing,
+          teams: teams
         })
-        console.log(this.state.standing)
+        console.log(teams)
       })
     }
 
@@ -43,7 +62,6 @@ class App extends Component {
     fetch('http://api.football-data.org/v1/competitions/445/fixtures', {
       headers: {
         'X-Auth-Token': `${config.MY_API_TOKEN}`,
-        'X-Response-Control': 'full'
       }
     })
       .then((response) => response.json())
@@ -79,8 +97,21 @@ class App extends Component {
         this.setState({
           fixtures: currentMatchday,
         })
-        console.log(this.state.fixtures)
       })
+  }
+
+  getTeamPlayers = () => {
+    this.state.teams.forEach((team1) => {
+      return fetch(team1 + '/players', {
+        headers: {
+          'X-Auth-Token': `${config.MY_API_TOKEN}`,
+        }
+      })
+        .then((response) => (response.json()))
+        .then((data) => {
+          console.log(data)
+        })
+    })
   }
   render() {
     const { leagueTable } = this.state
@@ -122,10 +153,9 @@ class App extends Component {
         width: '100%',
         flex: 1,
         padding: '1em',
-        
       },
       matchday: {
-        fontSize: '1.5em',
+        fontSize: '1em',
         margin: 0,
         paddingTop: '1em',
         paddingBottom: '.5em'
@@ -143,28 +173,48 @@ class App extends Component {
         padding: '.25em',
       }
     }
+    const actions = [
+     
+    ];
     return (
-      <div className="App">
-        <div style={styles.container}>
-          <div style={styles.league}>
-           <div> {leagueTable.leagueCaption} </div>
-            <LeagueLogo style={styles.logo} />
-            <div style={styles.matchday}> Matchday: {leagueTable.matchday}</div>
-            {
-            standing.map((crest, key) =>
-            <span key={'crest_' + key}> 
-              <img style={styles.crest} src={crest.crestURI} alt = ''/>
-            </span>
-            )
-           }
+        <div className="App">
+        <MuiThemeProvider>
+          <div style={styles.container}>
+            <div style={styles.league}>
+            <div> {leagueTable.leagueCaption} </div>
+              <LeagueLogo style={styles.logo} />
+              <div style={styles.matchday}> Matchday: {leagueTable.matchday}</div>
+              {
+              standing.map((crest, key) =>
+              <span key={'crest_' + key}> 
+                    <img style={styles.crest} src={crest.crestURI} alt='' onClick={this.handleOpen}/>
+              </span>
+              )
+            }
+            <Dialog 
+              actions={actions}
+              title="Scrollable Dialog"
+              modal={false}
+              open={this.state.open}
+              onRequestClose={this.handleClose}
+              autoScrollBodyContent={true}> 
+                {
+                  standing.map((crest, key) =>
+                    <span key={'crest_' + key}>
+                      <img style={styles.crest} src={crest.crestURI} alt=''/>
+                    </span>
+                  )
+                }
+              </Dialog>
+            </div>
+            <div style={styles.tableWrap}>
+              <LeagueTableRow standing={standing}/>
+            </div>
+            <div style={styles.fixtureWrap}>
+              <Fixtures fixtures={fixtures}/>
+            </div>
           </div>
-          <div style={styles.tableWrap}>
-            <LeagueTableRow standing={standing}/>
-          </div>
-          <div style={styles.fixtureWrap}>
-            <Fixtures fixtures={fixtures}/>
-          </div>
-        </div>
+      </MuiThemeProvider>
       </div>
     ); 
   }

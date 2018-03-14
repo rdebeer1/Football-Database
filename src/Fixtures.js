@@ -6,13 +6,20 @@ class Fixtures extends Component {
     const styles = {
       flex: {
         flexDirection: 'column',
-        alignItems: 'center',
+        padding: '1em',
+        display: 'flex',
       },
       match: {
-        padding: '1em',
-        borderBottom: 'solid #360037 1px',
+        paddingBottom: '1.5em',
+        paddingTop: '.5em',
+        paddingRight: '1em',
+        paddingLeft: '1em',
+        border: 'solid #360037 .2em',
         width: '15em',
-        textAlign: 'left',
+        background: '#fff',
+        color: '#360037',
+        height: '1em',
+        flex: 1,
         },
         team: {
           float: 'left',
@@ -27,9 +34,9 @@ class Fixtures extends Component {
           fixtures.map((game, key) =>
             <div key={'game_' + key}>
                 <div style={styles.match}>
-                 <span style={styles.team}>{game.awayTeamName}</span><span style={styles.result}> {game.result.goalsAwayTeam}</span> 
-                  <br /> 
-                <span style={styles.team}>{game.homeTeamName}</span><span style={styles.result}> {game.result.goalsHomeTeam}</span>
+                <span style={styles.team}>{game.awayTeamName}</span><span style={styles.result}> {game.result.goalsAwayTeam}</span> 
+                <br/>
+                <span style={styles.team}>@{game.homeTeamName}</span><span style={styles.result}> {game.result.goalsHomeTeam}</span>
                 </div>
             </div>
           )
