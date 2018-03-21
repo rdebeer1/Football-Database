@@ -22,7 +22,7 @@ class App extends Component {
       open: false,
     }
     urls = {
-      en: 'http://api.football-data.org/v1/competitions/445',
+      en: 'https://api.football-data.org/v1/competitions/445',
     }
 
   componentDidMount() {
