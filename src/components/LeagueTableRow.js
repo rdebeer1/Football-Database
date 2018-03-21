@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header'
 class LeagueTableRow extends Component {
   render() {
-    const { standing } = this.props
+    const { leagueData } = this.props
     const styles = {
       table: {
         overflow: 'scroll',
@@ -56,10 +56,10 @@ class LeagueTableRow extends Component {
     return (
     <div>
       <Header />
-      <div style={styles.table}>
+      <div style={styles.table} >
         {
-        standing.map((standings, key) =>
-          <div key={'standings_' + key}>
+        leagueData.map((standings, key) =>
+          <div key={standings.teamName}>
             {standings.position === 1 ? 
             <div style={styles.positionFirst}>
               <div style={styles.position}>

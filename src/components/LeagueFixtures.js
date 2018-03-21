@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-class Fixtures extends Component {
+class LeagueFixtures extends Component {
   render() {
-    const { fixtures } = this.props
+    const { leagueFixtures } = this.props
     const styles = {
       flex: {
         flexDirection: 'column',
@@ -20,24 +20,24 @@ class Fixtures extends Component {
         color: '#360037',
         height: '1em',
         flex: 1,
-        },
-        team: {
-          float: 'left',
-        },
-        result: {
-          float: 'right',
-        }
+      },
+      team: {
+        float: 'left',
+      },
+      result: {
+        float: 'right',
       }
+    }
     return (
       <div style={styles.flex}>
         {
-          fixtures.map((game, key) =>
+          leagueFixtures.map((game, key) =>
             <div key={'game_' + key}>
-                <div style={styles.match}>
-                <span style={styles.team}>{game.awayTeamName}</span><span style={styles.result}> {game.result.goalsAwayTeam}</span> 
-                <br/>
+              <div style={styles.match}>
+                <span style={styles.team}>{game.awayTeamName}</span><span style={styles.result}> {game.result.goalsAwayTeam}</span>
+                <br />
                 <span style={styles.team}>@{game.homeTeamName}</span><span style={styles.result}> {game.result.goalsHomeTeam}</span>
-                </div>
+              </div>
             </div>
           )
         }
@@ -45,4 +45,4 @@ class Fixtures extends Component {
     )
   }
 }
-export default Fixtures;
+export default LeagueFixtures;

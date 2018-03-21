@@ -1,30 +1,36 @@
 import React, { Component } from 'react';
-import LeagueTableRow from './LeagueTableRow';
-import LeagueLogo from './LeagueLogo'
-import Fixtures from './Fixtures'
+import LeagueTableRow from './components/LeagueTableRow';
+import LeagueLogo from './components/LeagueLogo'
+import LeagueFixtures from './components/LeagueFixtures'
+import TeamFixtures from './components/TeamFixtures'
+import TeamRosters from './components/TeamRosters'
 import './App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Dialog from 'material-ui/Dialog';
 const config = require('./config.js');
 
-// const db = require('../database/index.js');
-
 class App extends Component {
     state = {
-      leagueTable: [],
-      standing: [],
-      fixtures: [],
-      teams: [],
+      leagueSelect: 'en',
+      leagueData: [],
+      leagueCaption: null,
+      leagueMatchday: [],
+      teamRosters: [],
+      teamFixtures: [],
+      leagueFixtures: [],
+      teamId: null,
       open: false,
-  }
+    }
+    urls = {
+      en: 'http://api.football-data.org/v1/competitions/445/',
+    }
+
   componentDidMount() {
-    this.getLeagueTable();
     this.getLeagueFixtures();
+    if (this.state.leagueData.length === 0) {
+      this.getLeagueData(this.state.leagueSelect);
+    }
   }
-  componentWillUpdate() {
-    this.getTeamPlayers()
-  }
- 
   handleOpen = () => {
     this.setState({ open: true });
   };
@@ -33,90 +39,135 @@ class App extends Component {
     this.setState({ open: false });
   };
 
-  getLeagueTable = () => {
-    fetch('http://api.football-data.org/v1/soccerseasons/445/leagueTable', {
-      headers: {
-        'X-Auth-Token': `${config.MY_API_TOKEN}`,
-      }
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        let teams = []
-        data.standing.map((team) => {
-          teams.push(team._links.team.href)
-          return team;
-        })
-          this.setState({
-          leagueTable: {
-            leagueCaption: data.leagueCaption,
-            matchday: data.matchday,
-          },
-          standing: data.standing,
-          teams: teams
-        })
-        console.log(teams)
-      })
-    }
+  getLeagueData = () => {
+    let base_url = this.urls.en + '/leagueTable'; 
+    var myHeaders = new Headers();
+    myHeaders.append("X-Auth-Token", `${config.MY_API_TOKEN}`);
+    myHeaders.append("Content-Type", "text/plain")
 
+    var myInit = {
+      method: 'GET',
+      headers: myHeaders,
+      cache: 'default'
+    };
+
+    fetch(base_url, myInit)
+    .then((res) => res.json())
+    .then((data) => {
+      this.setState({
+        leagueData: data.standing,
+        leagueCaption: data.leagueCaption,
+        leagueMatchday: data.matchday,
+      });
+    })
+  }
+  getTeamFixtures = (team_base_url) => {
+    let url = team_base_url + '/fixtures';
+
+    var myHeaders = new Headers();
+    myHeaders.append("X-Auth-Token", `${config.MY_API_TOKEN}`);
+    myHeaders.append("Content-Type", "text/plain")
+
+    var myInit = {
+      method: 'GET',
+      headers: myHeaders,
+      cache: 'default'
+    };
+
+    fetch(url, myInit)
+    .then((res) => res.json())
+    .then((data) => {
+      this.setState({
+        teamFixtures: data.fixtures
+      });
+    });
+  }
+  getTeamRosters = (team_base_url) => {
+    let url = team_base_url + '/players';
+
+    var myHeaders = new Headers();
+    myHeaders.append("X-Auth-Token", `${config.MY_API_TOKEN}`);
+    myHeaders.append("Content-Type", "text/plain")
+
+    var myInit = {
+      method: 'GET',
+      headers: myHeaders,
+      cache: 'default'
+    };
+
+    fetch(url, myInit)
+    .then((res) => res.json())
+    .then((data) => {
+      this.setState({
+        teamRosters: data.players
+      });
+    })
+  }
   getLeagueFixtures = () => {
-    fetch('http://api.football-data.org/v1/competitions/445/fixtures', {
-      headers: {
-        'X-Auth-Token': `${config.MY_API_TOKEN}`,
-      }
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        let currentMatchday = []
-        let awayTeamName = []
-        let homeTeamName = []
-        let awayTeamGoals = []
-        let homeTeamGoals = []
-        data.fixtures.map((index) => {
-          if (index.matchday === this.state.leagueTable.matchday) {
-            currentMatchday.push(index)
-          }
-          return index;
-        })
-        currentMatchday.map((result) => {
-          awayTeamName.push(result.awayTeamName)
-          homeTeamName.push(result.homeTeamName)
-          if (result.result.goalsAwayTeam === null) {
-            result.result.goalsAwayTeam = ''
-            awayTeamGoals.push(result.result.goalsAwayTeam)
-          } else { 
-            awayTeamGoals.push(result.result.goalsAwayTeam)
-          }
-          if (result.result.goalsHomeTeam === null) {
-            result.result.goalsHomeTeam = ''
-            homeTeamGoals.push(result.result.goalsHomeTeam)
-          } else {
-            homeTeamGoals.push(result.result.goalsHomeTeam)
-          }
-          return result;
-        })
-        this.setState({
-          fixtures: currentMatchday,
-        })
+    let base_url = this.urls.en + '/fixtures'; 
+    var myHeaders = new Headers();
+    myHeaders.append("X-Auth-Token", `${config.MY_API_TOKEN}`);
+    myHeaders.append("Content-Type", "text/plain")
+    var myInit = {
+      method: 'GET',
+      headers: myHeaders,
+      cache: 'default'
+    };
+
+    fetch(base_url, myInit)
+    .then((res) => res.json())
+    .then((data) => {
+      let currentMatchday = []
+      let awayTeamName = []
+      let homeTeamName = []
+      let awayTeamGoals = []
+      let homeTeamGoals = []
+      data.fixtures.map((index) => {
+        if (index.matchday === this.state.leagueMatchday) {
+          currentMatchday.push(index)
+        }
+        return index;
       })
+      currentMatchday.map((result) => {
+        awayTeamName.push(result.awayTeamName)
+        homeTeamName.push(result.homeTeamName)
+        if (result.result.goalsAwayTeam === null) {
+          result.result.goalsAwayTeam = ''
+          awayTeamGoals.push(result.result.goalsAwayTeam)
+        } else {
+          awayTeamGoals.push(result.result.goalsAwayTeam)
+        }
+        if (result.result.goalsHomeTeam === null) {
+          result.result.goalsHomeTeam = ''
+          homeTeamGoals.push(result.result.goalsHomeTeam)
+        } else {
+          homeTeamGoals.push(result.result.goalsHomeTeam)
+        }
+        return result;
+      })
+      this.setState({
+        leagueFixtures: currentMatchday,
+      })
+    })
   }
 
-  getTeamPlayers = () => {
-    this.state.teams.forEach((team1) => {
-      return fetch(team1 + '/players', {
-        headers: {
-          'X-Auth-Token': `${config.MY_API_TOKEN}`,
-        }
-      })
-        .then((response) => (response.json()))
-        .then((data) => {
-          console.log(data)
-        })
-    })
+  handleOnTeamClick = (team_base_url) => {
+    console.log("handleOnTeamClick" , team_base_url);
+    this.setState({
+      teamId: team_base_url,
+    });
+    this.getTeamFixtures(team_base_url);
+    this.getTeamRosters(team_base_url);
   }
+
   render() {
-    const { leagueTable } = this.state
-    const { standing } = this.state
-    const { fixtures } = this.state
+    const { leagueData } = this.state
+    const { teamFixtures } = this.state
+    const { teamRosters } = this.state
+    const { leagueCaption } = this.state
+    const { leagueMatchday } = this.state
+    const { teamId } = this.state
+    const { leagueFixtures } = this.state
     const styles = {
       container: {
         justifyContent: 'center',
@@ -171,47 +222,50 @@ class App extends Component {
         height: '1.5em',
         width: '1.5em',
         padding: '.25em',
+      },
+      dialogStyle: {
+        display: 'flex',
+        textAlign: 'left',
+        fontSize: '10px',
+        marginLeft: '1em',
       }
     }
     const actions = [
-     
+      
     ];
     return (
         <div className="App">
         <MuiThemeProvider>
           <div style={styles.container}>
             <div style={styles.league}>
-            <div> {leagueTable.leagueCaption} </div>
+            <div> {leagueCaption} </div>
               <LeagueLogo style={styles.logo} />
-              <div style={styles.matchday}> Matchday: {leagueTable.matchday}</div>
+              <div style={styles.matchday}> Matchday: {leagueMatchday}</div>
               {
-              standing.map((crest, key) =>
-              <span key={'crest_' + key}> 
+              leagueData.map((crest, key) =>
+                  <span onClick={() => this.handleOnTeamClick(crest._links.team.href)} key={'crest_' + key}> 
                     <img style={styles.crest} src={crest.crestURI} alt='' onClick={this.handleOpen}/>
               </span>
               )
             }
-            <Dialog 
-              actions={actions}
-              title="Scrollable Dialog"
-              modal={false}
-              open={this.state.open}
-              onRequestClose={this.handleClose}
-              autoScrollBodyContent={true}> 
-                {
-                  standing.map((crest, key) =>
-                    <span key={'crest_' + key}>
-                      <img style={styles.crest} src={crest.crestURI} alt=''/>
-                    </span>
-                  )
-                }
+              <Dialog
+                actions={actions}
+                modal={false}
+                open={this.state.open}
+                onRequestClose={this.handleClose}
+                autoScrollBodyContent={true}
+                style={{alignText: 'center'}}>
+                <div style={styles.dialogStyle}>
+                  <TeamFixtures teamFixtures={teamFixtures} matchday={leagueMatchday} team_base_url={teamId} />
+                  <TeamRosters teamRosters={teamRosters} /> 
+                </div>
               </Dialog>
             </div>
             <div style={styles.tableWrap}>
-              <LeagueTableRow standing={standing}/>
+              <LeagueTableRow leagueData={leagueData} teamId={teamId}/>
             </div>
             <div style={styles.fixtureWrap}>
-              <Fixtures fixtures={fixtures}/>
+              <LeagueFixtures leagueFixtures={leagueFixtures} />
             </div>
           </div>
       </MuiThemeProvider>
