@@ -44,7 +44,6 @@ class App extends Component {
     var myHeaders = new Headers();
     myHeaders.append("X-Auth-Token", process.env.REACT_APP_MY_API_TOKEN);
     myHeaders.append("Content-Type", "text/plain")
-
     var myInit = {
       method: 'GET',
       headers: myHeaders,
