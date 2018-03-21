@@ -47,7 +47,8 @@ class App extends Component {
     var myInit = {
       method: 'GET',
       headers: myHeaders,
-      cache: 'default'
+      cache: 'default',
+      dataType: 'json',
     };
 
     fetch(base_url, myInit)
@@ -70,7 +71,8 @@ class App extends Component {
     var myInit = {
       method: 'GET',
       headers: myHeaders,
-      cache: 'default'
+      cache: 'default',
+      dataType: 'json',
     };
 
     fetch(url, myInit)
@@ -91,7 +93,8 @@ class App extends Component {
     var myInit = {
       method: 'GET',
       headers: myHeaders,
-      cache: 'default'
+      cache: 'default',
+      dataType: 'json',
     };
 
     fetch(url, myInit)
@@ -110,7 +113,8 @@ class App extends Component {
     var myInit = {
       method: 'GET',
       headers: myHeaders,
-      cache: 'default'
+      cache: 'default',
+      dataType: 'json',
     };
 
     fetch(base_url, myInit)
