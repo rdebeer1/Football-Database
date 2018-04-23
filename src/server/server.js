@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function (req, res) {
-  res.send();
+  res.render('index');
 });
 
 app.listen(process.env.PORT || 3000, function () {
