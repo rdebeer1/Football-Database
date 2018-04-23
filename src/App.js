@@ -7,7 +7,8 @@ import TeamRosters from './components/TeamRosters'
 import './App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Dialog from 'material-ui/Dialog';
-require('dotenv').config();
+const dotenv = require('dotenv');
+dotenv.config();
 
 class App extends Component {
     state = {
@@ -53,6 +54,7 @@ class App extends Component {
     fetch(base_url, myInit)
     .then((res) => res.json())
     .then((data) => {
+      console.log(data.standing)
       this.setState({
         leagueData: data.standing,
         leagueCaption: data.leagueCaption,
@@ -83,7 +85,6 @@ class App extends Component {
   }
   getTeamRosters = (team_base_url) => {
     let url = team_base_url + '/players';
-
     var myHeaders = new Headers();
     myHeaders.append("X-Auth-Token", process.env.REACT_APP_MY_API_TOKEN);
 
