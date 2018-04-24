@@ -7,7 +7,9 @@ import TeamRosters from './components/TeamRosters'
 import './App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Dialog from 'material-ui/Dialog';
-const config = require('./config.js');
+const dotenv = require('dotenv');
+dotenv.config();
+// const config = require('./config.js');
 
 class App extends Component {
     state = {
