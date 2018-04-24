@@ -48,6 +48,7 @@ class App extends Component {
       "X-Auth-Token": key,
     });
     var myInit = {
+      credentials: 'same-origin',
       method: 'GET',
       headers: myHeaders,
       cache: 'default',
@@ -72,6 +73,7 @@ class App extends Component {
       "X-Auth-Token": key,
     });
     var myInit = {
+      credentials: 'same-origin',
       method: 'GET',
       headers: myHeaders,
       cache: 'default',
@@ -92,6 +94,7 @@ class App extends Component {
       "X-Auth-Token": key,
     });
     var myInit = {
+      credentials: 'same-origin',
       method: 'GET',
       headers: myHeaders,
       cache: 'default',
@@ -112,6 +115,7 @@ class App extends Component {
       "X-Auth-Token": key,
     });
     var myInit = {
+      credentials: 'same-origin',
       method: 'GET',
       headers: myHeaders,
       cache: 'default',
