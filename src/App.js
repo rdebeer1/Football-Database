@@ -7,8 +7,11 @@ import TeamRosters from './components/TeamRosters'
 import './App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Dialog from 'material-ui/Dialog';
+const config = require('./config.js')
 const dotenv = require('dotenv');
 dotenv.config();
+
+const key = process.env.REACT_APP_MY_API_TOKEN || config.MY_API_TOKEN
 
 class App extends Component {
     state = {
@@ -43,7 +46,7 @@ class App extends Component {
   getLeagueData = () => {
     let base_url = this.urls.en + '/leagueTable'; 
     var myHeaders = new Headers({
-      'X-Auth-Token': process.env.REACT_APP_MY_API_TOKEN,
+      'X-Auth-Token': key,
     });
     var myInit = {
       method: 'GET',
@@ -67,7 +70,7 @@ class App extends Component {
     let url = team_base_url + '/fixtures';
 
     var myHeaders = new Headers({
-      "X-Auth-Token": process.env.REACT_APP_MY_API_TOKEN,
+      "X-Auth-Token": key,
     });
     var myInit = {
       method: 'GET',
@@ -87,7 +90,7 @@ class App extends Component {
   getTeamRosters = (team_base_url) => {
     let url = team_base_url + '/players';
     var myHeaders = new Headers({
-      "X-Auth-Token": process.env.REACT_APP_MY_API_TOKEN,
+      "X-Auth-Token": key,
     });
     var myInit = {
       method: 'GET',
@@ -107,7 +110,7 @@ class App extends Component {
   getLeagueFixtures = () => {
     let base_url = this.urls.en + '/fixtures'; 
     var myHeaders = new Headers({
-      "X-Auth-Token": process.env.REACT_APP_MY_API_TOKEN,
+      "X-Auth-Token": key,
     });
     var myInit = {
       method: 'GET',
