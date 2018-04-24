@@ -9,7 +9,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Dialog from 'material-ui/Dialog';
 const dotenv = require('dotenv');
 dotenv.config();
-const https = require('https');
+
 const key = process.env.REACT_APP_MY_API_TOKEN
 
 class App extends Component {
@@ -67,7 +67,9 @@ class App extends Component {
     })
   }
   getTeamFixtures = (team_base_url) => {
-    let url = team_base_url + '/fixtures';
+    let str = team_base_url
+    let url = str.replace('http://', "https://", team_base_url) + '/fixtures';
+    console.log(url)
 
     var myHeaders = new Headers({
       "X-Auth-Token": key,
@@ -79,8 +81,8 @@ class App extends Component {
       cache: 'default',
       dataType: 'json',
     };
-    const request = new https.Request(url, myInit)
-    fetch(request)
+
+    fetch(url, myInit)
     .then((res) => res.json())
     .then((data) => {
       this.setState({
@@ -89,7 +91,8 @@ class App extends Component {
     });
   }
   getTeamRosters = (team_base_url) => {
-    let url = team_base_url + '/players';
+    let str = team_base_url
+    let url = str.replace('http://', "https://", team_base_url ) + '/players';
     var myHeaders = new Headers({
       "X-Auth-Token": key,
     });
@@ -100,8 +103,8 @@ class App extends Component {
       cache: 'default',
       dataType: 'json',
     };
-    const request = new https.Request(url, myInit)
-    fetch(request)
+
+    fetch(url, myInit)
     .then((res) => res.json())
     .then((data) => {
       this.setState({
@@ -160,9 +163,10 @@ class App extends Component {
   }
 
   handleOnTeamClick = (team_base_url) => {
-    console.log("handleOnTeamClick" , team_base_url);
+    let  str = team_base_url
+    let url = str.replace('http://', "https://", team_base_url);
     this.setState({
-      teamId: team_base_url,
+      teamId: url,
     });
     this.getTeamFixtures(team_base_url);
     this.getTeamRosters(team_base_url);
