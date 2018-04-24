@@ -7,11 +7,10 @@ import TeamRosters from './components/TeamRosters'
 import './App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Dialog from 'material-ui/Dialog';
-const config = require('./config.js')
 const dotenv = require('dotenv');
 dotenv.config();
 
-const key = process.env.REACT_APP_MY_API_TOKEN || config.MY_API_TOKEN
+const key = process.env.REACT_APP_MY_API_TOKEN
 
 class App extends Component {
     state = {
