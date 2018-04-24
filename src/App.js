@@ -47,6 +47,7 @@ class App extends Component {
     var myInit = {
       credentials: 'same-orgin',
       method: 'GET',
+      mode: 'cors',
       headers: myHeaders,
       cache: 'default',
       dataType: 'json',
@@ -70,8 +71,8 @@ class App extends Component {
     myHeaders.append("X-Auth-Token", process.env.REACT_APP_MY_API_TOKEN);
 
     var myInit = {
-      credentials: 'same-origin',
       method: 'GET',
+      mode: 'cors',
       headers: myHeaders,
       cache: 'default',
       dataType: 'json',
@@ -91,8 +92,8 @@ class App extends Component {
     myHeaders.append("X-Auth-Token", process.env.REACT_APP_MY_API_TOKEN);
 
     var myInit = {
-      credentials: 'same-origin',
       method: 'GET',
+      mode: 'cors',
       headers: myHeaders,
       cache: 'default',
       dataType: 'json',
@@ -111,8 +112,8 @@ class App extends Component {
     var myHeaders = new Headers();
     myHeaders.append("X-Auth-Token", process.env.REACT_APP_MY_API_TOKEN);
     var myInit = {
-      credentials: 'same-origin',
       method: 'GET',
+      mode: 'cors',
       headers: myHeaders,
       cache: 'default',
       dataType: 'json',
