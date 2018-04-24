@@ -42,12 +42,10 @@ class App extends Component {
 
   getLeagueData = () => {
     let base_url = this.urls.en + '/leagueTable'; 
-    var myHeaders = new Headers();
-    myHeaders.append("X-Auth-Token", process.env.REACT_APP_MY_API_TOKEN);
+    var myHeaders = new Headers({
+      "X-Auth-Token": process.env.REACT_APP_MY_API_TOKEN
+    });
     var myInit = {
-      credentials: 'same-orgin',
-      method: 'GET',
-      mode: 'cors',
       headers: myHeaders,
       cache: 'default',
       dataType: 'json',
@@ -67,12 +65,10 @@ class App extends Component {
   getTeamFixtures = (team_base_url) => {
     let url = team_base_url + '/fixtures';
 
-    var myHeaders = new Headers();
-    myHeaders.append("X-Auth-Token", process.env.REACT_APP_MY_API_TOKEN);
-
+    var myHeaders = new Headers({
+      "X-Auth-Token": process.env.REACT_APP_MY_API_TOKEN
+    });
     var myInit = {
-      method: 'GET',
-      mode: 'cors',
       headers: myHeaders,
       cache: 'default',
       dataType: 'json',
@@ -88,12 +84,10 @@ class App extends Component {
   }
   getTeamRosters = (team_base_url) => {
     let url = team_base_url + '/players';
-    var myHeaders = new Headers();
-    myHeaders.append("X-Auth-Token", process.env.REACT_APP_MY_API_TOKEN);
-
+    var myHeaders = new Headers({
+      "X-Auth-Token": process.env.REACT_APP_MY_API_TOKEN
+    });
     var myInit = {
-      method: 'GET',
-      mode: 'cors',
       headers: myHeaders,
       cache: 'default',
       dataType: 'json',
@@ -109,11 +103,10 @@ class App extends Component {
   }
   getLeagueFixtures = () => {
     let base_url = this.urls.en + '/fixtures'; 
-    var myHeaders = new Headers();
-    myHeaders.append("X-Auth-Token", process.env.REACT_APP_MY_API_TOKEN);
+    var myHeaders = new Headers({
+      "X-Auth-Token": process.env.REACT_APP_MY_API_TOKEN
+    });
     var myInit = {
-      method: 'GET',
-      mode: 'cors',
       headers: myHeaders,
       cache: 'default',
       dataType: 'json',
