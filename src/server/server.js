@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const path = require('path');
 const app = express();
 app.use(express.static(path.join(__dirname, 'build')));
-const port = process.env.PORT;
+const port = process.env.PORT || 8080;
 
 app.get('/ping', function (req, res) {
   return res.send('pong');
