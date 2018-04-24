@@ -45,6 +45,7 @@ class App extends Component {
     var myHeaders = new Headers();
     myHeaders.append("X-Auth-Token", process.env.REACT_APP_MY_API_TOKEN);
     var myInit = {
+      credentials: 'include',
       method: 'GET',
       headers: myHeaders,
       cache: 'default',
@@ -69,6 +70,7 @@ class App extends Component {
     myHeaders.append("X-Auth-Token", process.env.REACT_APP_MY_API_TOKEN);
 
     var myInit = {
+      credentials: 'include',
       method: 'GET',
       headers: myHeaders,
       cache: 'default',
@@ -89,6 +91,7 @@ class App extends Component {
     myHeaders.append("X-Auth-Token", process.env.REACT_APP_MY_API_TOKEN);
 
     var myInit = {
+      credentials: 'include',
       method: 'GET',
       headers: myHeaders,
       cache: 'default',
