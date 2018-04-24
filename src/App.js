@@ -45,7 +45,7 @@ class App extends Component {
   getLeagueData = () => {
     let base_url = this.urls.en + '/leagueTable'; 
     var myHeaders = new Headers({
-      'X-Auth-Token': key,
+      "X-Auth-Token": key,
     });
     var myInit = {
       method: 'GET',
