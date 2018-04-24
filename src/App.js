@@ -266,7 +266,7 @@ class App extends Component {
                 autoScrollBodyContent={true}
                 style={{alignText: 'center'}}>
                 <div style={styles.dialogStyle}>
-                  <TeamFixtures teamFixtures={teamFixtures} matchday={leagueMatchday} team_base_url={teamId} />
+                  <TeamFixtures teamFixtures={teamFixtures} matchday={leagueMatchday} />
                   <TeamRosters teamRosters={teamRosters} /> 
                 </div>
               </Dialog>
