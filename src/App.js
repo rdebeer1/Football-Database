@@ -66,10 +66,8 @@ class App extends Component {
       });
     })
   }
-  getTeamFixtures = (team_base_url) => {
-    let str = team_base_url
-    let url = str.replace('http://', "https://", team_base_url) + '/fixtures';
-    console.log(url)
+  getTeamFixtures = (url) => {
+    let https = url + '/fixtures';
 
     var myHeaders = new Headers({
       "X-Auth-Token": key,
@@ -82,7 +80,7 @@ class App extends Component {
       dataType: 'json',
     };
 
-    fetch(url, myInit)
+    fetch(https, myInit)
     .then((res) => res.json())
     .then((data) => {
       this.setState({
@@ -90,9 +88,8 @@ class App extends Component {
       });
     });
   }
-  getTeamRosters = (team_base_url) => {
-    let str = team_base_url
-    let url = str.replace('http://', "https://", team_base_url ) + '/players';
+  getTeamRosters = (url) => {
+    let https = url + '/players';
     var myHeaders = new Headers({
       "X-Auth-Token": key,
     });
@@ -104,7 +101,7 @@ class App extends Component {
       dataType: 'json',
     };
 
-    fetch(url, myInit)
+    fetch(https, myInit)
     .then((res) => res.json())
     .then((data) => {
       this.setState({
@@ -165,11 +162,12 @@ class App extends Component {
   handleOnTeamClick = (team_base_url) => {
     let  str = team_base_url
     let url = str.replace('http://', "https://", team_base_url);
+    console.log(url)
     this.setState({
       teamId: url,
     });
-    this.getTeamFixtures(team_base_url);
-    this.getTeamRosters(team_base_url);
+    this.getTeamFixtures(url);
+    this.getTeamRosters(url);
   }
 
   render() {
