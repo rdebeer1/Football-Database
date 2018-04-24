@@ -11,8 +11,14 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+app.get('/leagueTable', function (req, res) {
+  res.render()
+});
+app.get('/fixtures', function (req, res) {
+  res.render()
+});
+app.get('/players', function (req, res) {
+  res.render()
 });
 
 app.listen(process.env.PORT || 3000, function () {
