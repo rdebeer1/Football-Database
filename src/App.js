@@ -49,6 +49,7 @@ class App extends Component {
       headers: myHeaders,
       cache: 'default',
       dataType: 'json',
+      protocol: 'auto'
     };
 
     fetch(base_url, myInit)
@@ -73,6 +74,7 @@ class App extends Component {
       headers: myHeaders,
       cache: 'default',
       dataType: 'json',
+      protocol: 'auto'
     };
 
     fetch(url, myInit)
@@ -93,6 +95,7 @@ class App extends Component {
       headers: myHeaders,
       cache: 'default',
       dataType: 'json',
+      protocol: 'auto'
     };
 
     fetch(url, myInit)
@@ -112,6 +115,7 @@ class App extends Component {
       headers: myHeaders,
       cache: 'default',
       dataType: 'json',
+      protocol: 'auto'
     };
 
     fetch(base_url, myInit)
