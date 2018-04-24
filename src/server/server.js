@@ -9,16 +9,10 @@ var app = express();
 app.use(express.static(path.join(__dirname, 'build')));
 app.use(cors());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/leagueTable', function (req, res) {
-  res.render()
-});
-app.get('/fixtures', function (req, res) {
-  res.render()
-});
-app.get('/players', function (req, res) {
-  res.render()
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 });
 
 app.listen(process.env.PORT || 3000, function () {
