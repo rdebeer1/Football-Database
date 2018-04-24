@@ -9,7 +9,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Dialog from 'material-ui/Dialog';
 const dotenv = require('dotenv');
 dotenv.config();
-
+const https = require('https');
 const key = process.env.REACT_APP_MY_API_TOKEN
 
 class App extends Component {
@@ -79,8 +79,8 @@ class App extends Component {
       cache: 'default',
       dataType: 'json',
     };
-
-    fetch(url, myInit)
+    const request = new https.Request(url, myInit)
+    fetch(request)
     .then((res) => res.json())
     .then((data) => {
       this.setState({
@@ -100,8 +100,8 @@ class App extends Component {
       cache: 'default',
       dataType: 'json',
     };
-
-    fetch(url, myInit)
+    const request = new https.Request(url, myInit)
+    fetch(request)
     .then((res) => res.json())
     .then((data) => {
       this.setState({
