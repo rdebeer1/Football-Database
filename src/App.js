@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import LeagueTableRow from './components/LeagueTableRow';
-import LeagueLogo from './components/LeagueLogo'
-import LeagueFixtures from './components/LeagueFixtures'
+import Main from './components/Main'
 import TeamFixtures from './components/TeamFixtures'
 import TeamRosters from './components/TeamRosters'
+import LeagueTableRow from './components/LeagueTableRow';
+import LeagueFixtures from './components/LeagueFixtures'
 import './App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Dialog from 'material-ui/Dialog';
@@ -178,6 +178,7 @@ class App extends Component {
     const { leagueMatchday } = this.state
     const { teamId } = this.state
     const { leagueFixtures } = this.state
+
     const styles = {
       container: {
         justifyContent: 'center',
@@ -215,29 +216,16 @@ class App extends Component {
         flex: 1,
         padding: '1em',
       },
-      matchday: {
-        fontSize: '1em',
-        margin: 0,
-        paddingTop: '1em',
-        paddingBottom: '.5em'
-      },
-      logo: {
-        height: "4em",
-        position: 'relative',
-        top: '.5em',
-        bottom: '.5em',
-        margin: '0 .1em'
-      },
-      crest: {
-        height: '1.5em',
-        width: '1.5em',
-        padding: '.25em',
-      },
       dialogStyle: {
         display: 'flex',
+        justifyContent: 'center',
         textAlign: 'left',
         fontSize: '10px',
-        marginLeft: '1em',
+        overflow: 'hidden'
+      },
+      test: {
+        display: 'flex',
+        flexDirection: 'row'
       }
     }
     const actions = [
@@ -246,37 +234,37 @@ class App extends Component {
     return (
         <div className="App">
         <MuiThemeProvider>
-          <div style={styles.container}>
-            <div style={styles.league}>
-            <div> {leagueCaption} </div>
-              <LeagueLogo style={styles.logo} />
-              <div style={styles.matchday}> Matchday: {leagueMatchday}</div>
-              {
-              leagueData.map((crest, key) =>
-                  <span onClick={() => this.handleOnTeamClick(crest._links.team.href)} key={'crest_' + key}> 
-                    <img style={styles.crest} src={crest.crestURI} alt='' onClick={this.handleOpen}/>
-              </span>
-              )
-            }
+          {/* <div style={styles.container}>
+            <div style={styles.league}> */}
+            <div style={styles.test}>
+              <Main
+                leagueCaption={leagueCaption}
+                leagueData={leagueData} 
+                leagueMatchday={leagueMatchday} 
+                handleOnTeamClick={this.handleOnTeamClick} 
+                handleOpen={this.handleOpen} 
+              />
               <Dialog
                 actions={actions}
                 modal={false}
                 open={this.state.open}
                 onRequestClose={this.handleClose}
-                autoScrollBodyContent={true}
-                style={{alignText: 'center'}}>
+                autoScrollBodyContent={false}
+                contentStyle={{ display: 'flex'}}
+                bodyStyle={{ display: 'flex', padding:'.5em'}}
+                >
                 <div style={styles.dialogStyle}>
                   <TeamFixtures teamFixtures={teamFixtures} matchday={leagueMatchday} />
                   <TeamRosters teamRosters={teamRosters} /> 
                 </div>
               </Dialog>
-            </div>
-            <div style={styles.tableWrap}>
+            {/* <div style={styles.tableWrap}> */}
               <LeagueTableRow leagueData={leagueData} teamId={teamId}/>
-            </div>
-            <div style={styles.fixtureWrap}>
+            {/* </div> */}
+            {/* <div style={styles.fixtureWrap}> */}
               <LeagueFixtures leagueFixtures={leagueFixtures} />
-            </div>
+            {/* </div> */}
+          {/* </div> */}
           </div>
       </MuiThemeProvider>
       </div>

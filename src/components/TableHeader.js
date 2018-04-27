@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class  Header extends Component {
+class TableHeader extends Component {
 
   render() {
     const styles = {
@@ -51,4 +51,4 @@ class  Header extends Component {
     )
   }
 }
-export default Header;
+export default TableHeader;

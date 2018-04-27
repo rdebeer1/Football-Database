@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import Header from './Header'
+import TableHeader from './TableHeader'
+
 class LeagueTableRow extends Component {
+
   render() {
     const { leagueData } = this.props
     const styles = {
@@ -55,7 +57,7 @@ class LeagueTableRow extends Component {
     }
     return (
     <div>
-      <Header />
+      <TableHeader />
       <div style={styles.table} >
         {
         leagueData.map((standings, key) =>

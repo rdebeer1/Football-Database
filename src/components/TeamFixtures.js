@@ -5,13 +5,15 @@ class TeamFixtures extends Component {
     const { teamFixtures } = this.props
     const { matchday } = this.props
     const styles = {
-      table: {
-        width: '25vh',
-        margin: '.75em'
+      container: {
+        flex: .8,
+        overflow: 'scroll',
+        fontSize: '1vw',
+        fontFamily: 'Premier League',
+        display: 'flex',
       },
-      date: {
-        width: '10vh',
-        margin: '.75em'
+      th: {
+        borderBottom: 'dashed .1vw black',
       }
     }
     const next_fixtures = teamFixtures.map((fix, i) => {
@@ -19,7 +21,7 @@ class TeamFixtures extends Component {
         let d = new Date(fix.date);
         let datestring = (d.getMonth() + 1) + "/" + d.getDate();
         return (
-          <tr key={fix.date} className="fixture-item fixture-table-head">
+          <tr key={fix.date + i}>
             <td>{datestring}</td>
             <td>{fix.homeTeamName}</td>
             <td>{fix.awayTeamName}</td>
@@ -29,14 +31,15 @@ class TeamFixtures extends Component {
       return next_fixtures;
     });
     return (
-      <div>
-        <table>
+      <div style={styles.container}>
+        <table style={{ borderSpacing: '1em' }}>
+          <caption>Upcoming Fixtures</caption><br />
           <tbody>
             <tr>
-              <th style={styles.date}>Date</th>
-              <th style={styles.table}>Home</th>
-              <th style={styles.table}>Away</th>
-            </tr>
+              <th style={styles.th}>Date</th>
+              <th style={styles.th}>Home</th>
+              <th style={styles.th}>Away</th>
+              </tr>
             {next_fixtures}
           </tbody>
         </table>
