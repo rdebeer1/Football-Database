@@ -11,7 +11,7 @@ class LeagueTableRow extends Component {
         overflow: 'scroll',
         color: 'white',
         display: 'flex',
-        flex: 1
+        flexGrow: 1
       },
       matchContainer: {
         fontFamily: 'Premier League',
