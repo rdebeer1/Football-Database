@@ -19,7 +19,7 @@ class LeagueTableRow extends Component {
         borderCollapse: 'collapse', 
         fontSize: '1vw',
         height: '100%',
-        overflow: 'scroll',
+        width: '100%',
 
       },
       positionFirst: {
