@@ -7,15 +7,17 @@ class LeagueFixtures extends Component {
       flex: {
         fontFamily: 'Premier League',
         overflow: 'scroll',
+        flexDirection: 'column',
         display: 'flex',
-        
+        flex: 1,
+        justifyContent: 'center'
       },
       table: {
         fontFamily: 'Premier League',
         fontSize: '1vw',
         borderCollapse: 'collapse',
-        marginTop: '1.5em'
-
+        width: '100%',
+        marginTop: '1.5em',
       },
       match: {
         color: '#fff',

@@ -11,13 +11,15 @@ class LeagueTableRow extends Component {
         overflow: 'scroll',
         color: 'white',
         display: 'flex',
-        flexGrow: 1
+        flex: 2
       },
       matchContainer: {
         fontFamily: 'Premier League',
         borderCollapse: 'collapse', 
-        fontSize: '1.25vw',
-        height:'100%',
+        fontSize: '1vw',
+        height: '100%',
+        width: '100%'
+
       },
       positionFirst: {
         backgroundColor: '#FF0047',

@@ -232,13 +232,14 @@ class App extends Component {
         color: '#fff',
         fontFamily: 'Premier League',
         fontWeight: 300,
+        flex: 1,
       }
     }
     const actions = [
       
     ];
     return (
-        <div>
+        <div style={{display: 'flex'}}>
         <MuiThemeProvider>
           {/* <div style={styles.container}>
             <div style={styles.league}> */}
