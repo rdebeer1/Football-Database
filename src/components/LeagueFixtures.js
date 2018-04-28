@@ -6,40 +6,41 @@ class LeagueFixtures extends Component {
     const styles = {
       flex: {
         fontFamily: 'Premier League',
+        overflow: 'scroll',
         display: 'flex',
-        flexDirection: 'column',
-        flex: .2,
-        height: '100vh'
+        
+      },
+      table: {
+        fontFamily: 'Premier League',
+        fontSize: '1vw',
+        borderCollapse: 'collapse',
+        marginTop: '1.5em'
+
       },
       match: {
-        border: 'solid #360037 .2em',
-        padding: '.5em',
-        background: '#fff',
-        color: '#360037',
-        display: 'flex',
-        flexDirection: 'row',
-        flexShrink: 1,
-        justifyContent: 'center'
+        color: '#fff',
       },
-      team: {
-        fontSize: '1vw',
-        flex: 1,
-      },
-      result: {
-        fontSize: '1vw',
-        flex: 1,
-      }
     }
+    const fixtures = leagueFixtures.map((game, key) => {
+      return (
+        <tbody key={'game_' + key}>
+          <tr style={styles.match}>
+            <td>@{game.awayTeamName}</td>
+            <td>{game.result.goalsAwayTeam}0</td>
+          </tr>
+          <tr style={styles.match}>
+            <td style={{ borderBottom: 'solid 1px white' }}>{game.homeTeamName}</td>
+            <td style={{ borderBottom: 'solid 1px white' }}>{game.result.goalsHomeTeam}0</td>
+          </tr>
+        </tbody>
+      );
+    })
+
     return (
       <div style={styles.flex}>
-        {
-          leagueFixtures.map((game, key) =>
-            <div key={'game_' + key} style={styles.match}>
-              <div style={styles.team}>@{game.awayTeamName}<div style={{ borderTop: '1px solid #360037', paddingTop: '2px' }}>{game.homeTeamName}</div></div>
-                <div style={styles.result}>{game.result.goalsAwayTeam}<div>{game.result.goalsHomeTeam}</div></div>
-              </div>
-          )
-        }
+        <table style={styles.table}>
+          {fixtures}
+       </table>
       </div>
     )
   }
