@@ -27,8 +27,8 @@ class LeagueFixtures extends Component {
       return (
         <tbody key={'game_' + key}>
           <tr style={styles.match}>
-            <td>@{game.awayTeamName}</td>
-            <td>{game.result.goalsAwayTeam}</td>
+            <td style={{ borderTop: 'solid 1px white' }}>@{game.awayTeamName}</td>
+            <td style={{ borderTop: 'solid 1px white' }}>{game.result.goalsAwayTeam}</td>
           </tr>
           <tr style={styles.match}>
             <td style={{ borderBottom: 'solid 1px white' }}>{game.homeTeamName}</td>
