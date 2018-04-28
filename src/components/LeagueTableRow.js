@@ -18,7 +18,7 @@ class LeagueTableRow extends Component {
         fontFamily: 'Premier League',
         borderCollapse: 'collapse', 
         fontSize: '1vw',
-        height: '100vh',
+        height: '100%',
         overflow: 'scroll',
 
       },
