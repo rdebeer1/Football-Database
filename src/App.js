@@ -225,14 +225,20 @@ class App extends Component {
       },
       test: {
         display: 'flex',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        overflow: 'hidden',
+        backgroundColor: '#360037',
+        justifyContent: 'center',
+        color: '#fff',
+        fontFamily: 'Premier League',
+        fontWeight: 300,
       }
     }
     const actions = [
       
     ];
     return (
-        <div className="App">
+        <div>
         <MuiThemeProvider>
           {/* <div style={styles.container}>
             <div style={styles.league}> */}

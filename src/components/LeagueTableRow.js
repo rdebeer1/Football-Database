@@ -1,203 +1,289 @@
 import React, { Component } from 'react';
-import TableHeader from './TableHeader'
 
 class LeagueTableRow extends Component {
 
   render() {
     const { leagueData } = this.props
     const styles = {
-      table: {
+      container: {
+        fontFamily: 'Premier League',
+        flexDirection: 'column',
         overflow: 'scroll',
-        height: '90vh',
+        color: 'white',
+        display: 'flex',
+        flex: 1,
+      },
+      matchContainer: {
+        fontFamily: 'Premier League',
+        borderCollapse: 'collapse', 
+        fontSize: '1.25vw',
+        height:'100%',
       },
       positionFirst: {
-        display: 'flex',
-        flexDirection: 'row',
-        backgroundColor: '#FF0047'
+        backgroundColor: '#FF0047',
       },
       positionFive: {
-        display: 'flex',
-        flexDirection: 'row',
-        backgroundColor: '#E10040'
+        backgroundColor: '#E10040',
       },
       midTable: {
-        display: 'flex',
-        flexDirection: 'row',
-        backgroundColor: '#8A0036'
+        backgroundColor: '#8A0036',
       },
       relegation: {
-        display: 'flex',
-        flexDirection: 'row',
-        backgroundColor: '#AB0039'
+        backgroundColor: '#AB0039',
       },
       position: {
-        padding: '.5em',
+        flex: 1,
         borderBottom: 'solid #360037 1px',
-        width: '2.2em',
+
       },
       teams: {
-        padding: '.5em',
+        flex: 1,
         borderBottom: 'solid #360037 1px',
-        width: '15em',
-        textAlign: 'left',
+
       },
       number: {
-        boxSizing: 'content-box',
-        padding: '.5em',
-        width: '2.2em',
-        border: 'solid #360037 1px',
-        borderTop: 0,
-        borderRight: 0,
-        borderLeft: 0,
+        flex: 1,
+        borderBottom: 'solid #360037 1px',
       },
       crest: {
-        height: '1em',
-        paddingRight: '.5em'
+        height: '1.5em ',
+        width: '1.5em',
       },
+      standings: {
+        flex: 1,
+        fontFamily: 'Premier League',
+        flexDirection: 'column',
+        overflow: 'scroll',
+      },
+
     }
-    return (
-    <div>
-      <TableHeader />
-      <div style={styles.table} >
-        {
-        leagueData.map((standings, key) =>
-          <div key={standings.teamName}>
-            {standings.position === 1 ? 
-            <div style={styles.positionFirst}>
-              <div style={styles.position}>
-                {standings.position}
-              </div>
-              <div style={styles.teams}>
-                <img style={styles.crest} src={standings.crestURI} alt='' /> {standings.teamName}
-              </div>
-              <div style={styles.number}>
-                {standings.playedGames}
-              </div>
-              <div style={styles.number}>
-                {standings.wins}
-              </div>
-              <div style={styles.number}>
-                {standings.draws}
-              </div>
-              <div style={styles.number}>
-                {standings.losses}
-              </div>
-              <div style={styles.number}>
-                {standings.goals}
-              </div>
-              <div style={styles.number}>
-                {standings.goalsAgainst}
-              </div>
-              <div style={styles.number}>
-                {standings.goalDifference}
-              </div>
-              <div style={styles.number}>
-                {standings.points}
-              </div>
-            </div> :
-            standings.position < 5 ?
-            <div style={styles.positionFive}>
-              <div style={styles.position}>
-                {standings.position}
-              </div>
-              <div style={styles.teams}>
-                      <img style={styles.crest} src={standings.crestURI} alt='' /> {standings.teamName}
-              </div>
-              <div style={styles.number}>
-                {standings.playedGames}
-              </div>
-              <div style={styles.number}>
-                {standings.wins}
-              </div>
-              <div style={styles.number}>
-                {standings.draws}
-              </div>
-              <div style={styles.number}>
-                {standings.losses}
-              </div>
-              <div style={styles.number}>
-                {standings.goals}
-              </div>
-              <div style={styles.number}>
-                {standings.goalsAgainst}
-              </div>
-              <div style={styles.number}>
-                {standings.goalDifference}
-              </div>
-              <div style={styles.number}>
-                {standings.points}
-              </div>
-            </div> :standings.position < 17 ?
-            <div style={styles.midTable}>
-              <div style={styles.position}>
-                {standings.position}
-              </div>
-              <div style={styles.teams}>
-                <img style={styles.crest} src={standings.crestURI} alt='' /> {standings.teamName}
-              </div>
-              <div style={styles.number}>
-                {standings.playedGames}
-              </div>
-              <div style={styles.number}>
-                {standings.wins}
-              </div>
-              <div style={styles.number}>
-                {standings.draws}
-              </div>
-              <div style={styles.number}>
-                {standings.losses}
-              </div>
-              <div style={styles.number}>
-                {standings.goals}
-              </div>
-              <div style={styles.number}>
-                {standings.goalsAgainst}
-              </div>
-              <div style={styles.number}>
-                {standings.goalDifference}
-              </div>
-              <div style={styles.number}>
-                {standings.points}
-              </div>
-            </div> : 
-             <div style={styles.relegation}>
-              <div style={styles.position}>
-                {standings.position}
-                </div>
-                <div style={styles.teams}>
-                  <img style={styles.crest} src={standings.crestURI} alt='' /> {standings.teamName}
-                </div>
-                <div style={styles.number}>
-                  {standings.playedGames}
-                </div>
-                <div style={styles.number}>
-                  {standings.wins}
-                </div>
-                <div style={styles.number}>
-                  {standings.draws}
-                </div>
-                <div style={styles.number}>
-                  {standings.losses}
-                </div>
-                <div style={styles.number}>
-                  {standings.goals}
-                </div>
-                <div style={styles.number}>
-                  {standings.goalsAgainst}
-                </div>
-                <div style={styles.number}>
-                  {standings.goalDifference}
-                </div>
-                <div style={styles.number}>
-                  {standings.points}
-                </div>
-            </div>}
-          </div>
-          )
-        }
+    const standings = leagueData.map((standings, key) => {
+      return (
+          standings.position === 1 ? 
+        <tr style={styles.positionFirst}key={standings.teamName + key}>
+          <td>{standings.position}</td>
+          <td><img style={styles.crest} src={standings.crestURI} alt=''/></td>
+          <td>{standings.teamName}</td>
+          <td>{standings.playedGames}</td>
+          <td>{standings.wins}</td>
+          <td>{standings.draws}</td>
+          <td>{standings.losses}</td>
+          <td>{standings.goals}</td>
+          <td>{standings.goalsAgainst}</td>
+          <td>{standings.goalDifference}</td>
+          <td>{standings.points}</td>
+        </tr> :
+        standings.position < 5 ?
+        <tr style={styles.positionFive} key={standings.teamName + key}>
+          <td>{standings.position}</td>
+          <td><img style={styles.crest} src={standings.crestURI} alt='' /></td>
+          <td>{standings.teamName}</td>
+          <td>{standings.playedGames}</td>
+          <td>{standings.wins}</td>
+          <td>{standings.draws}</td>
+          <td>{standings.losses}</td>
+          <td>{standings.goals}</td>
+          <td>{standings.goalsAgainst}</td>
+          <td>{standings.goalDifference}</td>
+          <td>{standings.points}</td>
+        </tr> :
+        standings.position < 17 ?
+        <tr style={styles.midTable} key={standings.teamName + key}>
+          <td>{standings.position}</td>
+          <td><img style={styles.crest} src={standings.crestURI} alt='' /></td>
+          <td>{standings.teamName}</td>
+          <td>{standings.playedGames}</td>
+          <td>{standings.wins}</td>
+          <td>{standings.draws}</td>
+          <td>{standings.losses}</td>
+          <td>{standings.goals}</td>
+          <td>{standings.goalsAgainst}</td>
+          <td>{standings.goalDifference}</td>
+          <td>{standings.points}</td>
+        </tr> :
+        <tr style={styles.relegation} key={standings.teamName + key}>
+          <td>{standings.position}</td>
+          <td><img style={styles.crest} src={standings.crestURI} alt='' /></td>
+          <td>{standings.teamName}</td>
+          <td>{standings.playedGames}</td>
+          <td>{standings.wins}</td>
+          <td>{standings.draws}</td>
+          <td>{standings.losses}</td>
+          <td>{standings.goals}</td>
+          <td>{standings.goalsAgainst}</td>
+          <td>{standings.goalDifference}</td>
+          <td>{standings.points}</td>
+        </tr> 
+      );
+    })
+    return(
+      <div style={styles.container}>
+        <table style={styles.matchContainer}>
+          <tbody style={{textAlign: 'center'}}>
+            <tr>
+              <th>POS</th>
+              <th></th>
+              <th>Team</th>
+              <th>Pl</th>
+              <th>W</th>
+              <th>D</th>
+              <th>L</th>
+              <th>GF</th>
+              <th>GA</th>
+              <th>GD</th>
+              <th>PTS</th>
+            </tr>
+            {standings}
+          </tbody>
+        </table>
       </div>
-     </div>
     )
   }
 }
 export default LeagueTableRow;
+//     return (
+//     <div style={styles.container}>
+//       <TableHeader />
+//       <div style={styles.matchContainer}>
+//         {
+//         leagueData.map((standings, key) =>
+//           <div style={styles.standings} key={standings.teamName}>
+//             {standings.position === 1 ? 
+//             <div style={styles.positionFirst}>
+//               <div style={styles.position}>
+//                 {standings.position}
+//               </div>
+//               <div style={styles.teams}>
+//                 <img style={styles.crest} src={standings.crestURI} alt='' /> {standings.teamName}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.playedGames}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.wins}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.draws}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.losses}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.goals}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.goalsAgainst}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.goalDifference}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.points}
+//               </div>
+//             </div> :
+//             standings.position < 5 ?
+//             <div style={styles.positionFive}>
+//               <div style={styles.position}>
+//                 {standings.position}
+//               </div>
+//               <div style={styles.teams}>
+//                       <img style={styles.crest} src={standings.crestURI} alt='' /> {standings.teamName}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.playedGames}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.wins}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.draws}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.losses}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.goals}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.goalsAgainst}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.goalDifference}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.points}
+//               </div>
+//             </div> :standings.position < 17 ?
+//             <div style={styles.midTable}>
+//               <div style={styles.position}>
+//                 {standings.position}
+//               </div>
+//               <div style={styles.teams}>
+//                 <img style={styles.crest} src={standings.crestURI} alt='' /> {standings.teamName}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.playedGames}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.wins}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.draws}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.losses}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.goals}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.goalsAgainst}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.goalDifference}
+//               </div>
+//               <div style={styles.number}>
+//                 {standings.points}
+//               </div>
+//             </div> : 
+//              <div style={styles.relegation}>
+//               <div style={styles.position}>
+//                 {standings.position}
+//                 </div>
+//                 <div style={styles.teams}>
+//                   <img style={styles.crest} src={standings.crestURI} alt='' /> {standings.teamName}
+//                 </div>
+//                 <div style={styles.number}>
+//                   {standings.playedGames}
+//                 </div>
+//                 <div style={styles.number}>
+//                   {standings.wins}
+//                 </div>
+//                 <div style={styles.number}>
+//                   {standings.draws}
+//                 </div>
+//                 <div style={styles.number}>
+//                   {standings.losses}
+//                 </div>
+//                 <div style={styles.number}>
+//                   {standings.goals}
+//                 </div>
+//                 <div style={styles.number}>
+//                   {standings.goalsAgainst}
+//                 </div>
+//                 <div style={styles.number}>
+//                   {standings.goalDifference}
+//                 </div>
+//                 <div style={styles.number}>
+//                   {standings.points}
+//                 </div>
+//             </div>}
+//           </div>
+//           )
+//         }
+//         </div>
+//       </div>
+//     )
+//   }
+// }
+// export default LeagueTableRow;

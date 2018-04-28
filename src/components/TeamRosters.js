@@ -8,11 +8,11 @@ class TeamRosters extends Component {
         flex: 1,
         overflow: 'scroll',
         fontSize: '1vw',
-        fontFamily: 'Premier League',
         display: 'flex',
       },
       th: {
         borderBottom: 'dashed .1vw black',
+        
       }
     }
     const players = teamRosters.map((p, i) => {

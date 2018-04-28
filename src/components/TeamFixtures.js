@@ -9,7 +9,6 @@ class TeamFixtures extends Component {
         flex: .8,
         overflow: 'scroll',
         fontSize: '1vw',
-        fontFamily: 'Premier League',
         display: 'flex',
       },
       th: {
