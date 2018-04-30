@@ -15,14 +15,16 @@ class Schedule extends Component {
         overflow: 'scroll',
         display: 'flex',
         flex: 1,
-        margin: '1vw',
+        alignItems: 'center',
         justifyContent: 'center',
+        border: '.1px white solid'
       },
       table: {
         fontFamily: 'Premier League',
         fontSize: '1vw',
         backgroundColor: 'transparent',
         display: 'flex',
+        flex: 1
       },
       font: {
         height: '1vw',

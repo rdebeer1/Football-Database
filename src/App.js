@@ -183,6 +183,7 @@ class App extends Component {
 
     const styles = {
       container: {
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         textAlign: 'center',
@@ -198,9 +199,8 @@ class App extends Component {
         flex: 1,
         display: 'flex',
         flexDirection: 'row',
-        padding: '1vw',
+        margin: '1vw',
         overflow: 'hidden',
-
       },
       main2: {
         flex: 4,

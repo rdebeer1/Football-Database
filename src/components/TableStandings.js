@@ -19,8 +19,11 @@ class TableStandings extends Component {
         fontFamily: 'Premier League',
         overflow: 'scroll',
         display: 'flex',
-        flex: 5,
+        flex: 4,
         padding: '1vw',
+        marginTop: '1vw',
+        border: '.1px white solid'
+        
       },
       tableContainer: {
         flex: 1,
