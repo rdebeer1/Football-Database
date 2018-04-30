@@ -234,8 +234,10 @@ class App extends Component {
         color: '#fff',
         fontFamily: 'Premier League',
         fontWeight: 300,
-        flex: 1,
-        height: '100vh'
+        height: '100vh',
+        position: 'static',
+        margin: 0,
+        padding: 0,
       },
       logo: {
         display: 'flex',
@@ -243,16 +245,16 @@ class App extends Component {
         fontFamily: 'Premier League',
         alignItems: 'center',
         justifyContent: 'center',
-        fontSize: '1.5vw'
+        fontSize: '1.5vw',
       },
     }
     const actions = [
       
     ];
     return (
-        <div style={{display: 'flex', position: 'static'}}>
+      <div className='App' style={styles.test}>
         <MuiThemeProvider>
-            <div style={styles.test}>
+            <div style={{display: 'flex', flexDirection: 'column', flex: 1}}>
               <div style={styles.main}>
                 <Title leagueCaption={leagueCaption} />
                 <Logo style={styles.logo} />
