@@ -29,6 +29,7 @@ class TableStandings extends Component {
         fontFamily: 'Premier League',
         backgroundColor: 'transparent',
         overflow: 'scroll',
+        height: '100vh'
       },
       team: {
         height: '1vw',
