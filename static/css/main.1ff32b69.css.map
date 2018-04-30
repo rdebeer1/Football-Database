@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,UACE,SACA,UACA,YACA,UACA,wBACA,gBACA,eAAiB","file":"static/css/main.1ff32b69.css","sourcesContent":["html, body {\n  margin: 0;\n  padding: 0;\n  height: 100%;\n  z-index: 1;\n  position: -webkit-sticky;\n  position: sticky;\n  overflow: hidden;\n}\n\n\n// WEBPACK FOOTER //\n// ./src/index.css"],"sourceRoot":""}
