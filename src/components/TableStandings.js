@@ -151,7 +151,7 @@ class TableStandings extends Component {
     })
     return(
       <div style={styles.container}>
-        <Table style={styles.tableContainer} selectable={false} bodyStyle={{overflow: 'auto'}}fixedHeader={false}>
+        <Table style={styles.tableContainer} selectable={false} bodyStyle={{overflow: 'visible'}}fixedHeader={false}>
           <TableHeader displaySelectAll={false} adjustForCheckbox={false} style={styles.header}>
             <TableRow style={styles.header}>
               <TableHeaderColumn style={styles.font}>POS</TableHeaderColumn>
