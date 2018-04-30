@@ -201,6 +201,8 @@ class App extends Component {
         flexDirection: 'row',
         margin: '1vw',
         overflow: 'hidden',
+        position: 'static',
+        height: '100%'
       },
       main2: {
         flex: 4,
@@ -208,6 +210,8 @@ class App extends Component {
         flexDirection: 'column',
         padding: '1vw',
         overflow: 'hidden',
+        position: 'static',
+        height: '100%'
       },
       league: {
         fontSize: '1.5em',
@@ -254,7 +258,7 @@ class App extends Component {
     return (
       <div className='App' style={styles.test}>
         <MuiThemeProvider>
-            <div style={{display: 'flex', flexDirection: 'column', flex: 1}}>
+            <div style={{display: 'flex', flexDirection: 'column', flex: 1, height: '100%'}}>
               <div style={styles.main}>
                 <Title leagueCaption={leagueCaption} />
                 <Logo style={styles.logo} />
