@@ -15,29 +15,28 @@ class Schedule extends Component {
         overflow: 'scroll',
         display: 'flex',
         flex: 1,
-        alignItems: 'center',
         justifyContent: 'center',
-        border: '.1px white solid'
+        border: '.1px white solid',
+        marginBottom: '1vw'
       },
       table: {
-        margin: '3px',
         fontFamily: 'Premier League',
         fontSize: '1vw',
         backgroundColor: 'transparent',
         display: 'flex',
-        flex: 1
+        flex: 1,
       },
       font: {
-        height: '1vw',
+        height: '2vw',
         color: 'white',
-        fontSize: '1vw',
+        fontSize: '1.5vw',
         textAlign: 'center',
         textOverflow: 'none',
         whiteSpace: 'no-wrap',
       },
       match: {
         color: '#fff',
-        height: '1vw'
+        height: '2vw'
       }
     }
     const fixtures = leagueFixtures.map((game, key) => {

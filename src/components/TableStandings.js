@@ -21,7 +21,6 @@ class TableStandings extends Component {
         display: 'flex',
         flex: 4,
         padding: '1vw',
-        marginTop: '1vw',
         border: '.1px white solid'
         
       },
@@ -42,7 +41,6 @@ class TableStandings extends Component {
       },
       header: {
         border: 'none',
-        position: 'sticky',
         top: 0,
       },
       font: {

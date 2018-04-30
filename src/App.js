@@ -250,7 +250,7 @@ class App extends Component {
       
     ];
     return (
-        <div style={{display: 'flex'}}>
+        <div style={{display: 'flex', position: 'static'}}>
         <MuiThemeProvider>
             <div style={styles.test}>
               <div style={styles.main}>
