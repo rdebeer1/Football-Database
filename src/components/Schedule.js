@@ -20,6 +20,7 @@ class Schedule extends Component {
         border: '.1px white solid'
       },
       table: {
+        margin: '3px',
         fontFamily: 'Premier League',
         fontSize: '1vw',
         backgroundColor: 'transparent',
