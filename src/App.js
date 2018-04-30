@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import Main from './components/Main'
+import Title from './components/Title'
+import Logo from './components/Logo'
 import TeamFixtures from './components/TeamFixtures'
 import TeamRosters from './components/TeamRosters'
-import LeagueTableRow from './components/LeagueTableRow';
-import LeagueFixtures from './components/LeagueFixtures'
+import TableStandings from './components/TableStandings';
+import Matchday from './components/Matchday'
+import Schedule from './components/Schedule'
 import './App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Dialog from 'material-ui/Dialog';
@@ -192,20 +194,20 @@ class App extends Component {
         fontWeight: 300,
         padding: '1em'
       },
-      tableWrap: {
-        textAlign: 'center',
-        backgroundColor: '#360037',
-        color: '#fff',
+      main: {
         flex: 1,
+        display: 'flex',
+        flexDirection: 'row',
+        padding: '1vw',
+        overflow: 'hidden',
+
       },
-      fixtureWrap: {
-        alignItems: 'center',
-        backgroundColor: '#360037',
-        color: '#fff',
-        flex: 1,
-        paddingTop: '1em',
-        paddingBottom: '.5em',
-        margin: 0,
+      main2: {
+        flex: 4,
+        display: 'flex',
+        flexDirection: 'column',
+        padding: '1vw',
+        overflow: 'hidden',
       },
       league: {
         fontSize: '1.5em',
@@ -225,7 +227,7 @@ class App extends Component {
       },
       test: {
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: 'column',
         overflow: 'hidden',
         backgroundColor: '#360037',
         justifyContent: 'center',
@@ -233,7 +235,16 @@ class App extends Component {
         fontFamily: 'Premier League',
         fontWeight: 300,
         flex: 1,
-      }
+        maxHeight: '100vh',
+      },
+      logo: {
+        display: 'flex',
+        flex: 1,
+        fontFamily: 'Premier League',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: '1.5vw'
+      },
     }
     const actions = [
       
@@ -241,16 +252,12 @@ class App extends Component {
     return (
         <div style={{display: 'flex'}}>
         <MuiThemeProvider>
-          {/* <div style={styles.container}>
-            <div style={styles.league}> */}
             <div style={styles.test}>
-              <Main
-                leagueCaption={leagueCaption}
-                leagueData={leagueData} 
-                leagueMatchday={leagueMatchday} 
-                handleOnTeamClick={this.handleOnTeamClick} 
-                handleOpen={this.handleOpen} 
-              />
+              <div style={styles.main}>
+                <Title leagueCaption={leagueCaption} />
+                <Logo style={styles.logo} />
+                <Matchday leagueMatchday={leagueMatchday}/>
+              </div>
               <Dialog
                 actions={actions}
                 modal={false}
@@ -265,13 +272,15 @@ class App extends Component {
                   <TeamRosters teamRosters={teamRosters} /> 
                 </div>
               </Dialog>
-            {/* <div style={styles.tableWrap}> */}
-              <LeagueTableRow leagueData={leagueData} teamId={teamId}/>
-            {/* </div> */}
-            {/* <div style={styles.fixtureWrap}> */}
-              <LeagueFixtures leagueFixtures={leagueFixtures} />
-            {/* </div> */}
-          {/* </div> */}
+            <div style={styles.main2}>
+              <Schedule leagueFixtures={leagueFixtures} />
+              <TableStandings 
+                leagueData={leagueData} 
+                teamId={teamId} 
+                handleOnTeamClick={this.handleOnTeamClick}
+                handleOpen={this.handleOpen} 
+                />
+            </div>
           </div>
       </MuiThemeProvider>
       </div>

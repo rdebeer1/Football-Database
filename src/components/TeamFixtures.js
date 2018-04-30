@@ -10,9 +10,11 @@ class TeamFixtures extends Component {
         overflow: 'scroll',
         fontSize: '1vw',
         display: 'flex',
+        color: '#360037',
+        fontFamily: 'Premier League',
       },
       th: {
-        borderBottom: 'dashed .1vw black',
+        borderBottom: 'dashed .1vw #360037',
       }
     }
     const next_fixtures = teamFixtures.map((fix, i) => {
@@ -32,7 +34,7 @@ class TeamFixtures extends Component {
     return (
       <div style={styles.container}>
         <table style={{ borderSpacing: '1em' }}>
-          <caption>Upcoming Fixtures</caption><br />
+          <caption style={{margin: '1vw'}}>Upcoming Fixtures</caption>
           <tbody>
             <tr>
               <th style={styles.th}>Date</th>

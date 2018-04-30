@@ -9,9 +9,11 @@ class TeamRosters extends Component {
         overflow: 'scroll',
         fontSize: '1vw',
         display: 'flex',
+        color: '#360037',
+        fontFamily: 'Premier League',
       },
       th: {
-        borderBottom: 'dashed .1vw black',
+        borderBottom: 'dashed .1vw #360037',
         
       }
     }
@@ -29,7 +31,7 @@ class TeamRosters extends Component {
     return (
       <div style={styles.container} >
         <table style={{borderSpacing: '1em'}}>
-          <caption>Team Roster</caption><br />
+          <caption style={{ margin: '1vw' }}>Team Roster</caption>
           <tbody>
             <tr>
               <th style={styles.th}>#</th>
