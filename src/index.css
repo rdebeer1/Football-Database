@@ -3,6 +3,6 @@ html, body {
   padding: 0;
   height: 100%;
   z-index: 1;
-  position: static;
+  position: sticky;
   overflow: hidden;
 }
