@@ -235,6 +235,7 @@ class App extends Component {
         fontFamily: 'Premier League',
         fontWeight: 300,
         flex: 1,
+        position: 'static',
         maxHeight: '100vh',
       },
       logo: {
