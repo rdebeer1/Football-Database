@@ -242,6 +242,7 @@ class App extends Component {
         position: 'static',
         margin: 0,
         padding: 0,
+        alignItems: 'center',
       },
       logo: {
         display: 'flex',
