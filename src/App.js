@@ -234,7 +234,6 @@ class App extends Component {
         flexDirection: 'column',
         overflow: 'hidden',
         backgroundColor: '#360037',
-        justifyContent: 'center',
         color: '#fff',
         fontFamily: 'Premier League',
         fontWeight: 300,
@@ -242,7 +241,6 @@ class App extends Component {
         position: 'static',
         margin: 0,
         padding: 0,
-        alignItems: 'center',
       },
       logo: {
         display: 'flex',
