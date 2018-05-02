@@ -14,8 +14,8 @@ exports.components = {
 
 exports.json = {
   "layout-index.json": require("/Users/DeBeer/projects/football-database/.cache/json/layout-index.json"),
-  "hello-world.json": require("/Users/DeBeer/projects/football-database/.cache/json/hello-world.json"),
   "my-second-post.json": require("/Users/DeBeer/projects/football-database/.cache/json/my-second-post.json"),
+  "hello-world.json": require("/Users/DeBeer/projects/football-database/.cache/json/hello-world.json"),
   "hi-folks.json": require("/Users/DeBeer/projects/football-database/.cache/json/hi-folks.json"),
   "dev-404-page.json": require("/Users/DeBeer/projects/football-database/.cache/json/dev-404-page.json"),
   "index.json": require("/Users/DeBeer/projects/football-database/.cache/json/index.json")

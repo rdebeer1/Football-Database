@@ -16,7 +16,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "8874f138f1ff112a65465e419387115c",
+        "contentDigest": "86050231ba455f239ea1a4c4ebcb53ec",
         "description": "Plugin dev-404-page",
         "owner": "internal-data-bridge"
       }
@@ -1123,7 +1123,12 @@
             "version": "^1.0.2"
           }
         ],
-        "devDependencies": [],
+        "devDependencies": [
+          {
+            "name": "gh-pages",
+            "version": "^1.1.0"
+          }
+        ],
         "peerDependencies": [],
         "optionalDependecies": [],
         "bundledDependecies": []
@@ -1146,12 +1151,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-05-02T03:09:17.212Z",
+      "buildTime": "2018-05-02T03:41:39.970Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "3938472019ce07579c912173ebe58f4f",
+        "contentDigest": "ba021a01e7ac466cb8b5ee6ad025cd03",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1161,7 +1166,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "12ee88cf56ccce549dbbe3eb633163cd",
+        "contentDigest": "eede1a2e9ad116a30bae8daae7e6b0a6",
         "type": "Directory",
         "description": "Directory \"src/posts\"",
         "owner": "gatsby-source-filesystem"
@@ -1173,7 +1178,7 @@
       "size": 160,
       "prettySize": "160 B",
       "modifiedTime": "2018-05-01T04:09:27.210Z",
-      "accessTime": "2018-05-02T03:09:21.831Z",
+      "accessTime": "2018-05-02T03:41:42.660Z",
       "changeTime": "2018-05-02T03:01:51.204Z",
       "birthTime": "2018-05-01T04:09:27.205Z",
       "root": "/",
@@ -1191,11 +1196,11 @@
       "blksize": 4194304,
       "ino": 8608390749,
       "blocks": 0,
-      "atimeMs": 1525230561831.0134,
+      "atimeMs": 1525232502659.977,
       "mtimeMs": 1525147767210.2998,
       "ctimeMs": 1525230111203.5325,
       "birthtimeMs": 1525147767204.914,
-      "atime": "2018-05-02T03:09:21.831Z",
+      "atime": "2018-05-02T03:41:42.660Z",
       "mtime": "2018-05-01T04:09:27.210Z",
       "ctime": "2018-05-02T03:01:51.204Z",
       "birthtime": "2018-05-01T04:09:27.205Z"
@@ -1205,7 +1210,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "1ecc4a29c825b361512b624fb326bcfb",
+        "contentDigest": "7530ae8088a5f48484ea0fb29b67f8dc",
         "type": "Directory",
         "description": "Directory \"src/posts/hello-world\"",
         "owner": "gatsby-source-filesystem"
@@ -1217,7 +1222,7 @@
       "size": 128,
       "prettySize": "128 B",
       "modifiedTime": "2018-05-01T04:09:27.205Z",
-      "accessTime": "2018-05-02T03:09:21.837Z",
+      "accessTime": "2018-05-02T03:41:42.663Z",
       "changeTime": "2018-05-02T03:01:51.201Z",
       "birthTime": "2018-05-01T04:09:27.205Z",
       "root": "/",
@@ -1235,11 +1240,11 @@
       "blksize": 4194304,
       "ino": 8608390750,
       "blocks": 0,
-      "atimeMs": 1525230561836.581,
+      "atimeMs": 1525232502662.926,
       "mtimeMs": 1525147767205.4731,
       "ctimeMs": 1525230111200.6328,
       "birthtimeMs": 1525147767205.0461,
-      "atime": "2018-05-02T03:09:21.837Z",
+      "atime": "2018-05-02T03:41:42.663Z",
       "mtime": "2018-05-01T04:09:27.205Z",
       "ctime": "2018-05-02T03:01:51.201Z",
       "birthtime": "2018-05-01T04:09:27.205Z"
@@ -1249,7 +1254,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "c718a9ff4503d6bd2649184e08c7a8aa",
+        "contentDigest": "b9ed0657af73442dbd0f795c68f2bac1",
         "type": "Directory",
         "description": "Directory \"src/posts/hi-folks\"",
         "owner": "gatsby-source-filesystem"
@@ -1261,7 +1266,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2018-05-01T04:09:27.210Z",
-      "accessTime": "2018-05-02T03:09:21.838Z",
+      "accessTime": "2018-05-02T03:41:42.663Z",
       "changeTime": "2018-05-02T03:01:51.202Z",
       "birthTime": "2018-05-01T04:09:27.209Z",
       "root": "/",
@@ -1279,11 +1284,11 @@
       "blksize": 4194304,
       "ino": 8608390753,
       "blocks": 0,
-      "atimeMs": 1525230561837.7961,
+      "atimeMs": 1525232502662.9846,
       "mtimeMs": 1525147767209.7478,
       "ctimeMs": 1525230111201.8684,
       "birthtimeMs": 1525147767209.4658,
-      "atime": "2018-05-02T03:09:21.838Z",
+      "atime": "2018-05-02T03:41:42.663Z",
       "mtime": "2018-05-01T04:09:27.210Z",
       "ctime": "2018-05-02T03:01:51.202Z",
       "birthtime": "2018-05-01T04:09:27.209Z"
@@ -1293,7 +1298,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "ae7f4da5f470a2809aa85700b709f1d1",
+        "contentDigest": "a4bea3aefad50107739ced4528fb4eeb",
         "type": "Directory",
         "description": "Directory \"src/posts/my-second-post\"",
         "owner": "gatsby-source-filesystem"
@@ -1305,7 +1310,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2018-05-01T04:09:27.210Z",
-      "accessTime": "2018-05-02T03:09:21.838Z",
+      "accessTime": "2018-05-02T03:41:42.663Z",
       "changeTime": "2018-05-02T03:01:51.203Z",
       "birthTime": "2018-05-01T04:09:27.210Z",
       "root": "/",
@@ -1323,12 +1328,59 @@
       "blksize": 4194304,
       "ino": 8608390755,
       "blocks": 0,
-      "atimeMs": 1525230561837.6216,
+      "atimeMs": 1525232502663.001,
       "mtimeMs": 1525147767210.4023,
       "ctimeMs": 1525230111203.4136,
       "birthtimeMs": 1525147767210.2876,
-      "atime": "2018-05-02T03:09:21.838Z",
+      "atime": "2018-05-02T03:41:42.663Z",
       "mtime": "2018-05-01T04:09:27.210Z",
+      "ctime": "2018-05-02T03:01:51.203Z",
+      "birthtime": "2018-05-01T04:09:27.210Z"
+    },
+    "/Users/DeBeer/projects/football-database/src/posts/my-second-post/index.md absPath of file": {
+      "id": "/Users/DeBeer/projects/football-database/src/posts/my-second-post/index.md absPath of file",
+      "children": [
+        "/Users/DeBeer/projects/football-database/src/posts/my-second-post/index.md absPath of file >>> MarkdownRemark"
+      ],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "fef193964fc7c139bea1d17dad270f09",
+        "mediaType": "text/markdown",
+        "type": "File",
+        "description": "File \"src/posts/my-second-post/index.md\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "posts",
+      "absolutePath": "/Users/DeBeer/projects/football-database/src/posts/my-second-post/index.md",
+      "relativePath": "my-second-post/index.md",
+      "extension": "md",
+      "size": 403,
+      "prettySize": "403 B",
+      "modifiedTime": "2018-05-01T04:09:27.211Z",
+      "accessTime": "2018-05-02T03:11:53.737Z",
+      "changeTime": "2018-05-02T03:01:51.203Z",
+      "birthTime": "2018-05-01T04:09:27.210Z",
+      "root": "/",
+      "dir": "/Users/DeBeer/projects/football-database/src/posts/my-second-post",
+      "base": "index.md",
+      "ext": ".md",
+      "name": "index",
+      "relativeDirectory": "my-second-post",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4194304,
+      "ino": 8608390756,
+      "blocks": 8,
+      "atimeMs": 1525230713736.7603,
+      "mtimeMs": 1525147767210.5176,
+      "ctimeMs": 1525230111203.2976,
+      "birthtimeMs": 1525147767210.391,
+      "atime": "2018-05-02T03:11:53.737Z",
+      "mtime": "2018-05-01T04:09:27.211Z",
       "ctime": "2018-05-02T03:01:51.203Z",
       "birthtime": "2018-05-01T04:09:27.210Z"
     },
@@ -1352,7 +1404,7 @@
       "size": 866,
       "prettySize": "866 B",
       "modifiedTime": "2018-05-01T04:09:27.205Z",
-      "accessTime": "2018-05-02T03:07:54.853Z",
+      "accessTime": "2018-05-02T03:11:53.736Z",
       "changeTime": "2018-05-02T03:01:51.199Z",
       "birthTime": "2018-05-01T04:09:27.205Z",
       "root": "/",
@@ -1370,61 +1422,14 @@
       "blksize": 4194304,
       "ino": 8608390751,
       "blocks": 8,
-      "atimeMs": 1525230474852.7017,
+      "atimeMs": 1525230713736.4675,
       "mtimeMs": 1525147767205.2712,
       "ctimeMs": 1525230111199.421,
       "birthtimeMs": 1525147767205.158,
-      "atime": "2018-05-02T03:07:54.853Z",
+      "atime": "2018-05-02T03:11:53.736Z",
       "mtime": "2018-05-01T04:09:27.205Z",
       "ctime": "2018-05-02T03:01:51.199Z",
       "birthtime": "2018-05-01T04:09:27.205Z"
-    },
-    "/Users/DeBeer/projects/football-database/src/posts/my-second-post/index.md absPath of file": {
-      "id": "/Users/DeBeer/projects/football-database/src/posts/my-second-post/index.md absPath of file",
-      "children": [
-        "/Users/DeBeer/projects/football-database/src/posts/my-second-post/index.md absPath of file >>> MarkdownRemark"
-      ],
-      "parent": "___SOURCE___",
-      "internal": {
-        "contentDigest": "fef193964fc7c139bea1d17dad270f09",
-        "mediaType": "text/markdown",
-        "type": "File",
-        "description": "File \"src/posts/my-second-post/index.md\"",
-        "owner": "gatsby-source-filesystem"
-      },
-      "sourceInstanceName": "posts",
-      "absolutePath": "/Users/DeBeer/projects/football-database/src/posts/my-second-post/index.md",
-      "relativePath": "my-second-post/index.md",
-      "extension": "md",
-      "size": 403,
-      "prettySize": "403 B",
-      "modifiedTime": "2018-05-01T04:09:27.211Z",
-      "accessTime": "2018-05-02T03:07:54.853Z",
-      "changeTime": "2018-05-02T03:01:51.203Z",
-      "birthTime": "2018-05-01T04:09:27.210Z",
-      "root": "/",
-      "dir": "/Users/DeBeer/projects/football-database/src/posts/my-second-post",
-      "base": "index.md",
-      "ext": ".md",
-      "name": "index",
-      "relativeDirectory": "my-second-post",
-      "dev": 16777220,
-      "mode": 33188,
-      "nlink": 1,
-      "uid": 501,
-      "gid": 20,
-      "rdev": 0,
-      "blksize": 4194304,
-      "ino": 8608390756,
-      "blocks": 8,
-      "atimeMs": 1525230474853.01,
-      "mtimeMs": 1525147767210.5176,
-      "ctimeMs": 1525230111203.2976,
-      "birthtimeMs": 1525147767210.391,
-      "atime": "2018-05-02T03:07:54.853Z",
-      "mtime": "2018-05-01T04:09:27.211Z",
-      "ctime": "2018-05-02T03:01:51.203Z",
-      "birthtime": "2018-05-01T04:09:27.210Z"
     },
     "/Users/DeBeer/projects/football-database/src/posts/hi-folks/index.md absPath of file": {
       "id": "/Users/DeBeer/projects/football-database/src/posts/hi-folks/index.md absPath of file",
@@ -1446,7 +1451,7 @@
       "size": 5495,
       "prettySize": "5.5 kB",
       "modifiedTime": "2018-05-01T04:09:27.210Z",
-      "accessTime": "2018-05-02T03:07:54.853Z",
+      "accessTime": "2018-05-02T03:11:53.737Z",
       "changeTime": "2018-05-02T03:01:51.202Z",
       "birthTime": "2018-05-01T04:09:27.210Z",
       "root": "/",
@@ -1464,34 +1469,14 @@
       "blksize": 4194304,
       "ino": 8608390754,
       "blocks": 16,
-      "atimeMs": 1525230474852.8804,
+      "atimeMs": 1525230713736.639,
       "mtimeMs": 1525147767209.9375,
       "ctimeMs": 1525230111201.7537,
       "birthtimeMs": 1525147767209.735,
-      "atime": "2018-05-02T03:07:54.853Z",
+      "atime": "2018-05-02T03:11:53.737Z",
       "mtime": "2018-05-01T04:09:27.210Z",
       "ctime": "2018-05-02T03:01:51.202Z",
       "birthtime": "2018-05-01T04:09:27.210Z"
-    },
-    "/Users/DeBeer/projects/football-database/src/posts/hello-world/index.md absPath of file >>> MarkdownRemark": {
-      "id": "/Users/DeBeer/projects/football-database/src/posts/hello-world/index.md absPath of file >>> MarkdownRemark",
-      "children": [],
-      "parent": "/Users/DeBeer/projects/football-database/src/posts/hello-world/index.md absPath of file",
-      "internal": {
-        "content": "---\ntitle: Hello World\ndate: \"2015-05-01T22:12:03.284Z\"\npath: \"/hello-world/\"\n---\n\nThis is my first post on my new fake blog! How exciting!\n\nI'm sure I'll write a lot more interesting things in the future.\n\nOh, and here's a great quote from this Wikipedia on [salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).\n\n>A salted duck egg is a Chinese preserved food product made by soaking duck eggs in brine, or packing each egg in damp, salted charcoal. In Asian supermarkets, these eggs are sometimes sold covered in a thick layer of salted charcoal paste. The eggs may also be sold with the salted paste removed, wrapped in plastic, and vacuum packed. From the salt curing process, the salted duck eggs have a briny aroma, a gelatin-like egg white and a firm-textured, round yolk that is bright orange-red in color.\n\n![Chinese Salty Egg](./salty_egg.jpg)\n",
-        "type": "MarkdownRemark",
-        "contentDigest": "ea7072a200546fb17bbf952196542ce0",
-        "owner": "gatsby-transformer-remark"
-      },
-      "frontmatter": {
-        "title": "Hello World",
-        "date": "2015-05-01T22:12:03.284Z",
-        "path": "/hello-world/",
-        "_PARENT": "/Users/DeBeer/projects/football-database/src/posts/hello-world/index.md absPath of file",
-        "parent": "/Users/DeBeer/projects/football-database/src/posts/hello-world/index.md absPath of file"
-      },
-      "excerpt": "",
-      "fileAbsolutePath": "/Users/DeBeer/projects/football-database/src/posts/hello-world/index.md"
     },
     "/Users/DeBeer/projects/football-database/src/posts/my-second-post/index.md absPath of file >>> MarkdownRemark": {
       "id": "/Users/DeBeer/projects/football-database/src/posts/my-second-post/index.md absPath of file >>> MarkdownRemark",
@@ -1512,6 +1497,26 @@
       },
       "excerpt": "",
       "fileAbsolutePath": "/Users/DeBeer/projects/football-database/src/posts/my-second-post/index.md"
+    },
+    "/Users/DeBeer/projects/football-database/src/posts/hello-world/index.md absPath of file >>> MarkdownRemark": {
+      "id": "/Users/DeBeer/projects/football-database/src/posts/hello-world/index.md absPath of file >>> MarkdownRemark",
+      "children": [],
+      "parent": "/Users/DeBeer/projects/football-database/src/posts/hello-world/index.md absPath of file",
+      "internal": {
+        "content": "---\ntitle: Hello World\ndate: \"2015-05-01T22:12:03.284Z\"\npath: \"/hello-world/\"\n---\n\nThis is my first post on my new fake blog! How exciting!\n\nI'm sure I'll write a lot more interesting things in the future.\n\nOh, and here's a great quote from this Wikipedia on [salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).\n\n>A salted duck egg is a Chinese preserved food product made by soaking duck eggs in brine, or packing each egg in damp, salted charcoal. In Asian supermarkets, these eggs are sometimes sold covered in a thick layer of salted charcoal paste. The eggs may also be sold with the salted paste removed, wrapped in plastic, and vacuum packed. From the salt curing process, the salted duck eggs have a briny aroma, a gelatin-like egg white and a firm-textured, round yolk that is bright orange-red in color.\n\n![Chinese Salty Egg](./salty_egg.jpg)\n",
+        "type": "MarkdownRemark",
+        "contentDigest": "ea7072a200546fb17bbf952196542ce0",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "Hello World",
+        "date": "2015-05-01T22:12:03.284Z",
+        "path": "/hello-world/",
+        "_PARENT": "/Users/DeBeer/projects/football-database/src/posts/hello-world/index.md absPath of file",
+        "parent": "/Users/DeBeer/projects/football-database/src/posts/hello-world/index.md absPath of file"
+      },
+      "excerpt": "",
+      "fileAbsolutePath": "/Users/DeBeer/projects/football-database/src/posts/hello-world/index.md"
     },
     "/Users/DeBeer/projects/football-database/src/posts/hi-folks/index.md absPath of file >>> MarkdownRemark": {
       "id": "/Users/DeBeer/projects/football-database/src/posts/hi-folks/index.md absPath of file >>> MarkdownRemark",
@@ -1553,7 +1558,7 @@
       "size": 684322,
       "prettySize": "684 kB",
       "modifiedTime": "2018-05-01T04:09:27.209Z",
-      "accessTime": "2018-05-02T03:09:21.838Z",
+      "accessTime": "2018-05-02T03:11:53.737Z",
       "changeTime": "2018-05-02T03:01:51.201Z",
       "birthTime": "2018-05-01T04:09:27.205Z",
       "root": "/",
@@ -1571,11 +1576,11 @@
       "blksize": 4194304,
       "ino": 8608390752,
       "blocks": 1344,
-      "atimeMs": 1525230561837.94,
+      "atimeMs": 1525230713736.5254,
       "mtimeMs": 1525147767209.0525,
       "ctimeMs": 1525230111200.5112,
       "birthtimeMs": 1525147767205.4614,
-      "atime": "2018-05-02T03:09:21.838Z",
+      "atime": "2018-05-02T03:11:53.737Z",
       "mtime": "2018-05-01T04:09:27.209Z",
       "ctime": "2018-05-02T03:01:51.201Z",
       "birthtime": "2018-05-01T04:09:27.205Z"
@@ -1595,7 +1600,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "75e2f902a45e7aca83cb1c97be37cd14",
+        "contentDigest": "32f59d1d8ac3d8746632c88835664ebf",
         "type": "Directory",
         "description": "Directory \"src/assets/images\"",
         "owner": "gatsby-source-filesystem"
@@ -1607,7 +1612,7 @@
       "size": 224,
       "prettySize": "224 B",
       "modifiedTime": "2018-05-02T01:23:21.605Z",
-      "accessTime": "2018-05-02T03:09:21.902Z",
+      "accessTime": "2018-05-02T03:41:42.687Z",
       "changeTime": "2018-05-02T03:01:51.250Z",
       "birthTime": "2018-05-01T04:09:27.187Z",
       "root": "/",
@@ -1625,11 +1630,11 @@
       "blksize": 4194304,
       "ino": 8608390777,
       "blocks": 0,
-      "atimeMs": 1525230561901.773,
+      "atimeMs": 1525232502686.7026,
       "mtimeMs": 1525224201605.0503,
       "ctimeMs": 1525230111250.1453,
       "birthtimeMs": 1525147767186.7222,
-      "atime": "2018-05-02T03:09:21.902Z",
+      "atime": "2018-05-02T03:41:42.687Z",
       "mtime": "2018-05-02T01:23:21.605Z",
       "ctime": "2018-05-02T03:01:51.250Z",
       "birthtime": "2018-05-01T04:09:27.187Z"
@@ -1652,7 +1657,7 @@
       "size": 6148,
       "prettySize": "6.15 kB",
       "modifiedTime": "2018-05-02T01:23:26.611Z",
-      "accessTime": "2018-05-02T03:08:02.785Z",
+      "accessTime": "2018-05-02T03:09:31.187Z",
       "changeTime": "2018-05-02T03:01:51.245Z",
       "birthTime": "2018-05-02T00:22:56.252Z",
       "root": "/",
@@ -1670,11 +1675,11 @@
       "blksize": 4194304,
       "ino": 8608390778,
       "blocks": 16,
-      "atimeMs": 1525230482785.4495,
+      "atimeMs": 1525230571186.712,
       "mtimeMs": 1525224206610.6792,
       "ctimeMs": 1525230111245.2705,
       "birthtimeMs": 1525220576252.3906,
-      "atime": "2018-05-02T03:08:02.785Z",
+      "atime": "2018-05-02T03:09:31.187Z",
       "mtime": "2018-05-02T01:23:26.611Z",
       "ctime": "2018-05-02T03:01:51.245Z",
       "birthtime": "2018-05-02T00:22:56.252Z"
@@ -1699,7 +1704,7 @@
       "size": 490461,
       "prettySize": "490 kB",
       "modifiedTime": "2018-05-02T00:57:26.881Z",
-      "accessTime": "2018-05-02T03:08:02.786Z",
+      "accessTime": "2018-05-02T03:11:53.732Z",
       "changeTime": "2018-05-02T03:01:51.246Z",
       "birthTime": "2018-05-02T00:53:14.722Z",
       "root": "/",
@@ -1717,14 +1722,24 @@
       "blksize": 4194304,
       "ino": 8608390779,
       "blocks": 960,
-      "atimeMs": 1525230482785.5176,
+      "atimeMs": 1525230713732.3652,
       "mtimeMs": 1525222646881.4548,
       "ctimeMs": 1525230111246.0298,
       "birthtimeMs": 1525222394721.8677,
-      "atime": "2018-05-02T03:08:02.786Z",
+      "atime": "2018-05-02T03:11:53.732Z",
       "mtime": "2018-05-02T00:57:26.881Z",
       "ctime": "2018-05-02T03:01:51.246Z",
       "birthtime": "2018-05-02T00:53:14.722Z"
+    },
+    "/Users/DeBeer/projects/football-database/src/assets/images/pl.jpg absPath of file >> ImageSharp": {
+      "id": "/Users/DeBeer/projects/football-database/src/assets/images/pl.jpg absPath of file >> ImageSharp",
+      "children": [],
+      "parent": "/Users/DeBeer/projects/football-database/src/assets/images/pl.jpg absPath of file",
+      "internal": {
+        "contentDigest": "a5c716a6c55cff8b8062051f1a84db1a",
+        "type": "ImageSharp",
+        "owner": "gatsby-transformer-sharp"
+      }
     },
     "/Users/DeBeer/projects/football-database/src/assets/images/bg.jpg absPath of file": {
       "id": "/Users/DeBeer/projects/football-database/src/assets/images/bg.jpg absPath of file",
@@ -1746,7 +1761,7 @@
       "size": 532418,
       "prettySize": "532 kB",
       "modifiedTime": "2018-05-02T00:26:28.891Z",
-      "accessTime": "2018-05-02T03:08:02.785Z",
+      "accessTime": "2018-05-02T03:11:53.732Z",
       "changeTime": "2018-05-02T03:01:51.250Z",
       "birthTime": "2018-05-02T00:21:20.706Z",
       "root": "/",
@@ -1764,21 +1779,21 @@
       "blksize": 4194304,
       "ino": 8608390782,
       "blocks": 1040,
-      "atimeMs": 1525230482785.486,
+      "atimeMs": 1525230713732.2341,
       "mtimeMs": 1525220788890.743,
       "ctimeMs": 1525230111250.0251,
       "birthtimeMs": 1525220480706.033,
-      "atime": "2018-05-02T03:08:02.785Z",
+      "atime": "2018-05-02T03:11:53.732Z",
       "mtime": "2018-05-02T00:26:28.891Z",
       "ctime": "2018-05-02T03:01:51.250Z",
       "birthtime": "2018-05-02T00:21:20.706Z"
     },
-    "/Users/DeBeer/projects/football-database/src/assets/images/pl.jpg absPath of file >> ImageSharp": {
-      "id": "/Users/DeBeer/projects/football-database/src/assets/images/pl.jpg absPath of file >> ImageSharp",
+    "/Users/DeBeer/projects/football-database/src/assets/images/bg.jpg absPath of file >> ImageSharp": {
+      "id": "/Users/DeBeer/projects/football-database/src/assets/images/bg.jpg absPath of file >> ImageSharp",
       "children": [],
-      "parent": "/Users/DeBeer/projects/football-database/src/assets/images/pl.jpg absPath of file",
+      "parent": "/Users/DeBeer/projects/football-database/src/assets/images/bg.jpg absPath of file",
       "internal": {
-        "contentDigest": "a5c716a6c55cff8b8062051f1a84db1a",
+        "contentDigest": "8506ed76394fa01ea876c6083f51a105",
         "type": "ImageSharp",
         "owner": "gatsby-transformer-sharp"
       }
@@ -1803,7 +1818,7 @@
       "size": 181809,
       "prettySize": "182 kB",
       "modifiedTime": "2018-05-02T01:22:58.872Z",
-      "accessTime": "2018-05-02T03:07:54.850Z",
+      "accessTime": "2018-05-02T03:11:53.732Z",
       "changeTime": "2018-05-02T03:01:51.248Z",
       "birthTime": "2018-05-02T01:22:58.241Z",
       "root": "/",
@@ -1821,24 +1836,14 @@
       "blksize": 4194304,
       "ino": 8608390781,
       "blocks": 360,
-      "atimeMs": 1525230474850.2195,
+      "atimeMs": 1525230713732.3147,
       "mtimeMs": 1525224178872.1167,
       "ctimeMs": 1525230111248.3066,
       "birthtimeMs": 1525224178241.3367,
-      "atime": "2018-05-02T03:07:54.850Z",
+      "atime": "2018-05-02T03:11:53.732Z",
       "mtime": "2018-05-02T01:22:58.872Z",
       "ctime": "2018-05-02T03:01:51.248Z",
       "birthtime": "2018-05-02T01:22:58.241Z"
-    },
-    "/Users/DeBeer/projects/football-database/src/assets/images/bg.jpg absPath of file >> ImageSharp": {
-      "id": "/Users/DeBeer/projects/football-database/src/assets/images/bg.jpg absPath of file >> ImageSharp",
-      "children": [],
-      "parent": "/Users/DeBeer/projects/football-database/src/assets/images/bg.jpg absPath of file",
-      "internal": {
-        "contentDigest": "8506ed76394fa01ea876c6083f51a105",
-        "type": "ImageSharp",
-        "owner": "gatsby-transformer-sharp"
-      }
     },
     "/Users/DeBeer/projects/football-database/src/assets/images/pb.jpg absPath of file >> ImageSharp": {
       "id": "/Users/DeBeer/projects/football-database/src/assets/images/pb.jpg absPath of file >> ImageSharp",
@@ -1848,27 +1853,6 @@
         "contentDigest": "b481350ffd75f7192ba3bf64bae22fad",
         "type": "ImageSharp",
         "owner": "gatsby-transformer-sharp"
-      }
-    },
-    "SitePage /hello-world/": {
-      "layout": "index",
-      "jsonName": "hello-world.json",
-      "internalComponentName": "ComponentHelloWorld",
-      "path": "/hello-world/",
-      "component": "/Users/DeBeer/projects/football-database/src/templates/blog-post.js",
-      "componentChunkName": "component---src-templates-blog-post-js",
-      "context": {},
-      "pluginCreator___NODE": "Plugin default-site-plugin",
-      "pluginCreatorId": "Plugin default-site-plugin",
-      "componentPath": "/Users/DeBeer/projects/football-database/src/templates/blog-post.js",
-      "id": "SitePage /hello-world/",
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "b16ab50364f3729b5103dddd702aee99",
-        "description": "Your site's \"gatsby-node.js\"",
-        "owner": "internal-data-bridge"
       }
     },
     "SitePage /my-second-post/": {
@@ -1887,7 +1871,28 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "d2540d2edd65312b7b0ff5aee5351086",
+        "contentDigest": "0deeeadda3ab8d428a3fbdf6a35b5f39",
+        "description": "Your site's \"gatsby-node.js\"",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /hello-world/": {
+      "layout": "index",
+      "jsonName": "hello-world.json",
+      "internalComponentName": "ComponentHelloWorld",
+      "path": "/hello-world/",
+      "component": "/Users/DeBeer/projects/football-database/src/templates/blog-post.js",
+      "componentChunkName": "component---src-templates-blog-post-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "pluginCreatorId": "Plugin default-site-plugin",
+      "componentPath": "/Users/DeBeer/projects/football-database/src/templates/blog-post.js",
+      "id": "SitePage /hello-world/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "a36ea7ce806c1b1ac7dbce71fe375964",
         "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
@@ -1908,7 +1913,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "aca221889c80d009d9d15c10af692204",
+        "contentDigest": "a97cb5c5a76a8b9e28589af3b75051a9",
         "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
@@ -1929,7 +1934,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "9ae583da6451e4e262e8b2352661e039",
+        "contentDigest": "9e9c541f68319d7c8810a70a5cbb26f6",
         "description": "Plugin component-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -1937,24 +1942,24 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "b5581113ec47e962f6103ddf8824bd8a"
+    "PLUGINS_HASH": "22d0cdbee703f3487f033de3c00965f8"
   },
   "componentDataDependencies": {
     "nodes": {
       "Site": [
         "/hi-folks/",
-        "/my-second-post/",
         "/hello-world/",
+        "/my-second-post/",
         "/"
       ],
       "/Users/DeBeer/projects/football-database/src/posts/hi-folks/index.md absPath of file >>> MarkdownRemark": [
         "/hi-folks/"
       ],
-      "/Users/DeBeer/projects/football-database/src/posts/my-second-post/index.md absPath of file >>> MarkdownRemark": [
-        "/my-second-post/"
-      ],
       "/Users/DeBeer/projects/football-database/src/posts/hello-world/index.md absPath of file >>> MarkdownRemark": [
         "/hello-world/"
+      ],
+      "/Users/DeBeer/projects/football-database/src/posts/my-second-post/index.md absPath of file >>> MarkdownRemark": [
+        "/my-second-post/"
       ]
     },
     "connections": {
