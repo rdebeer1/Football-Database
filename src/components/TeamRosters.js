@@ -16,7 +16,7 @@ class TeamRosters extends Component {
     })
     return (
       <div style={{ display: 'flex', flexDirection: 'column', color: '#242424'}}>
-        <table style={{  flex: '100 0 auto', flexDirection: 'column', textAlign: 'center'}}>
+        <table style={{ flex: '100 0 auto', flexDirection: 'column', textAlign: 'center'}}>
           <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold'}}>Squad</caption>
           <tbody>
             <tr>
