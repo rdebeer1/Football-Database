@@ -1,23 +1,13 @@
 {
   "nodes": {
     "SitePage /dev-404-page/": {
-      "layout": "index",
-      "jsonName": "dev-404-page.json",
-      "internalComponentName": "ComponentDev404Page",
       "path": "/dev-404-page/",
-      "component": "/Users/DeBeer/projects/football-database/.cache/dev-404-page.js",
-      "componentChunkName": "component---cache-dev-404-page-js",
-      "context": {},
-      "pluginCreator___NODE": "Plugin dev-404-page",
-      "pluginCreatorId": "Plugin dev-404-page",
-      "componentPath": "/Users/DeBeer/projects/football-database/.cache/dev-404-page.js",
       "id": "SitePage /dev-404-page/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "86050231ba455f239ea1a4c4ebcb53ec",
-        "description": "Plugin dev-404-page",
+        "contentDigest": "f91d29e10ba680b413138cf9ed86e655",
         "owner": "internal-data-bridge"
       }
     },
@@ -1147,16 +1137,14 @@
         "author": "Robert DeBeer",
         "description": "Premier League Football-Database"
       },
-      "port": "8000",
-      "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-05-02T03:41:39.970Z",
+      "buildTime": "2018-05-02T03:56:10.169Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "ba021a01e7ac466cb8b5ee6ad025cd03",
+        "contentDigest": "411e9e2e21cbead8def6492671142825",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1166,7 +1154,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "eede1a2e9ad116a30bae8daae7e6b0a6",
+        "contentDigest": "0b430f8fa432594f9246df593ed0d764",
         "type": "Directory",
         "description": "Directory \"src/posts\"",
         "owner": "gatsby-source-filesystem"
@@ -1178,7 +1166,7 @@
       "size": 160,
       "prettySize": "160 B",
       "modifiedTime": "2018-05-01T04:09:27.210Z",
-      "accessTime": "2018-05-02T03:41:42.660Z",
+      "accessTime": "2018-05-02T03:56:12.459Z",
       "changeTime": "2018-05-02T03:01:51.204Z",
       "birthTime": "2018-05-01T04:09:27.205Z",
       "root": "/",
@@ -1196,11 +1184,11 @@
       "blksize": 4194304,
       "ino": 8608390749,
       "blocks": 0,
-      "atimeMs": 1525232502659.977,
+      "atimeMs": 1525233372458.9138,
       "mtimeMs": 1525147767210.2998,
       "ctimeMs": 1525230111203.5325,
       "birthtimeMs": 1525147767204.914,
-      "atime": "2018-05-02T03:41:42.660Z",
+      "atime": "2018-05-02T03:56:12.459Z",
       "mtime": "2018-05-01T04:09:27.210Z",
       "ctime": "2018-05-02T03:01:51.204Z",
       "birthtime": "2018-05-01T04:09:27.205Z"
@@ -1210,7 +1198,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "7530ae8088a5f48484ea0fb29b67f8dc",
+        "contentDigest": "2d9d5acfb631fa8885cb0b2ea6b3d6f1",
         "type": "Directory",
         "description": "Directory \"src/posts/hello-world\"",
         "owner": "gatsby-source-filesystem"
@@ -1222,7 +1210,7 @@
       "size": 128,
       "prettySize": "128 B",
       "modifiedTime": "2018-05-01T04:09:27.205Z",
-      "accessTime": "2018-05-02T03:41:42.663Z",
+      "accessTime": "2018-05-02T03:56:12.463Z",
       "changeTime": "2018-05-02T03:01:51.201Z",
       "birthTime": "2018-05-01T04:09:27.205Z",
       "root": "/",
@@ -1240,11 +1228,11 @@
       "blksize": 4194304,
       "ino": 8608390750,
       "blocks": 0,
-      "atimeMs": 1525232502662.926,
+      "atimeMs": 1525233372462.5393,
       "mtimeMs": 1525147767205.4731,
       "ctimeMs": 1525230111200.6328,
       "birthtimeMs": 1525147767205.0461,
-      "atime": "2018-05-02T03:41:42.663Z",
+      "atime": "2018-05-02T03:56:12.463Z",
       "mtime": "2018-05-01T04:09:27.205Z",
       "ctime": "2018-05-02T03:01:51.201Z",
       "birthtime": "2018-05-01T04:09:27.205Z"
@@ -1254,7 +1242,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "b9ed0657af73442dbd0f795c68f2bac1",
+        "contentDigest": "89e894c03ad097824569ca303ebd3396",
         "type": "Directory",
         "description": "Directory \"src/posts/hi-folks\"",
         "owner": "gatsby-source-filesystem"
@@ -1266,7 +1254,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2018-05-01T04:09:27.210Z",
-      "accessTime": "2018-05-02T03:41:42.663Z",
+      "accessTime": "2018-05-02T03:56:12.463Z",
       "changeTime": "2018-05-02T03:01:51.202Z",
       "birthTime": "2018-05-01T04:09:27.209Z",
       "root": "/",
@@ -1284,11 +1272,11 @@
       "blksize": 4194304,
       "ino": 8608390753,
       "blocks": 0,
-      "atimeMs": 1525232502662.9846,
+      "atimeMs": 1525233372462.6123,
       "mtimeMs": 1525147767209.7478,
       "ctimeMs": 1525230111201.8684,
       "birthtimeMs": 1525147767209.4658,
-      "atime": "2018-05-02T03:41:42.663Z",
+      "atime": "2018-05-02T03:56:12.463Z",
       "mtime": "2018-05-01T04:09:27.210Z",
       "ctime": "2018-05-02T03:01:51.202Z",
       "birthtime": "2018-05-01T04:09:27.209Z"
@@ -1298,7 +1286,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "a4bea3aefad50107739ced4528fb4eeb",
+        "contentDigest": "0692e278843b9d5494b7c25479e03d33",
         "type": "Directory",
         "description": "Directory \"src/posts/my-second-post\"",
         "owner": "gatsby-source-filesystem"
@@ -1310,7 +1298,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2018-05-01T04:09:27.210Z",
-      "accessTime": "2018-05-02T03:41:42.663Z",
+      "accessTime": "2018-05-02T03:56:12.463Z",
       "changeTime": "2018-05-02T03:01:51.203Z",
       "birthTime": "2018-05-01T04:09:27.210Z",
       "root": "/",
@@ -1328,11 +1316,11 @@
       "blksize": 4194304,
       "ino": 8608390755,
       "blocks": 0,
-      "atimeMs": 1525232502663.001,
+      "atimeMs": 1525233372462.573,
       "mtimeMs": 1525147767210.4023,
       "ctimeMs": 1525230111203.4136,
       "birthtimeMs": 1525147767210.2876,
-      "atime": "2018-05-02T03:41:42.663Z",
+      "atime": "2018-05-02T03:56:12.463Z",
       "mtime": "2018-05-01T04:09:27.210Z",
       "ctime": "2018-05-02T03:01:51.203Z",
       "birthtime": "2018-05-01T04:09:27.210Z"
@@ -1357,7 +1345,7 @@
       "size": 403,
       "prettySize": "403 B",
       "modifiedTime": "2018-05-01T04:09:27.211Z",
-      "accessTime": "2018-05-02T03:11:53.737Z",
+      "accessTime": "2018-05-02T03:41:43.565Z",
       "changeTime": "2018-05-02T03:01:51.203Z",
       "birthTime": "2018-05-01T04:09:27.210Z",
       "root": "/",
@@ -1375,11 +1363,11 @@
       "blksize": 4194304,
       "ino": 8608390756,
       "blocks": 8,
-      "atimeMs": 1525230713736.7603,
+      "atimeMs": 1525232503564.9375,
       "mtimeMs": 1525147767210.5176,
       "ctimeMs": 1525230111203.2976,
       "birthtimeMs": 1525147767210.391,
-      "atime": "2018-05-02T03:11:53.737Z",
+      "atime": "2018-05-02T03:41:43.565Z",
       "mtime": "2018-05-01T04:09:27.211Z",
       "ctime": "2018-05-02T03:01:51.203Z",
       "birthtime": "2018-05-01T04:09:27.210Z"
@@ -1404,7 +1392,7 @@
       "size": 866,
       "prettySize": "866 B",
       "modifiedTime": "2018-05-01T04:09:27.205Z",
-      "accessTime": "2018-05-02T03:11:53.736Z",
+      "accessTime": "2018-05-02T03:41:43.564Z",
       "changeTime": "2018-05-02T03:01:51.199Z",
       "birthTime": "2018-05-01T04:09:27.205Z",
       "root": "/",
@@ -1422,11 +1410,11 @@
       "blksize": 4194304,
       "ino": 8608390751,
       "blocks": 8,
-      "atimeMs": 1525230713736.4675,
+      "atimeMs": 1525232503563.886,
       "mtimeMs": 1525147767205.2712,
       "ctimeMs": 1525230111199.421,
       "birthtimeMs": 1525147767205.158,
-      "atime": "2018-05-02T03:11:53.736Z",
+      "atime": "2018-05-02T03:41:43.564Z",
       "mtime": "2018-05-01T04:09:27.205Z",
       "ctime": "2018-05-02T03:01:51.199Z",
       "birthtime": "2018-05-01T04:09:27.205Z"
@@ -1451,7 +1439,7 @@
       "size": 5495,
       "prettySize": "5.5 kB",
       "modifiedTime": "2018-05-01T04:09:27.210Z",
-      "accessTime": "2018-05-02T03:11:53.737Z",
+      "accessTime": "2018-05-02T03:41:43.564Z",
       "changeTime": "2018-05-02T03:01:51.202Z",
       "birthTime": "2018-05-01T04:09:27.210Z",
       "root": "/",
@@ -1469,11 +1457,11 @@
       "blksize": 4194304,
       "ino": 8608390754,
       "blocks": 16,
-      "atimeMs": 1525230713736.639,
+      "atimeMs": 1525232503564.3616,
       "mtimeMs": 1525147767209.9375,
       "ctimeMs": 1525230111201.7537,
       "birthtimeMs": 1525147767209.735,
-      "atime": "2018-05-02T03:11:53.737Z",
+      "atime": "2018-05-02T03:41:43.564Z",
       "mtime": "2018-05-01T04:09:27.210Z",
       "ctime": "2018-05-02T03:01:51.202Z",
       "birthtime": "2018-05-01T04:09:27.210Z"
@@ -1558,7 +1546,7 @@
       "size": 684322,
       "prettySize": "684 kB",
       "modifiedTime": "2018-05-01T04:09:27.209Z",
-      "accessTime": "2018-05-02T03:11:53.737Z",
+      "accessTime": "2018-05-02T03:41:43.564Z",
       "changeTime": "2018-05-02T03:01:51.201Z",
       "birthTime": "2018-05-01T04:09:27.205Z",
       "root": "/",
@@ -1576,11 +1564,11 @@
       "blksize": 4194304,
       "ino": 8608390752,
       "blocks": 1344,
-      "atimeMs": 1525230713736.5254,
+      "atimeMs": 1525232503563.9473,
       "mtimeMs": 1525147767209.0525,
       "ctimeMs": 1525230111200.5112,
       "birthtimeMs": 1525147767205.4614,
-      "atime": "2018-05-02T03:11:53.737Z",
+      "atime": "2018-05-02T03:41:43.564Z",
       "mtime": "2018-05-01T04:09:27.209Z",
       "ctime": "2018-05-02T03:01:51.201Z",
       "birthtime": "2018-05-01T04:09:27.205Z"
@@ -1600,7 +1588,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "32f59d1d8ac3d8746632c88835664ebf",
+        "contentDigest": "4b20376e00c3b4f0513ecfec69866f01",
         "type": "Directory",
         "description": "Directory \"src/assets/images\"",
         "owner": "gatsby-source-filesystem"
@@ -1612,7 +1600,7 @@
       "size": 224,
       "prettySize": "224 B",
       "modifiedTime": "2018-05-02T01:23:21.605Z",
-      "accessTime": "2018-05-02T03:41:42.687Z",
+      "accessTime": "2018-05-02T03:56:12.485Z",
       "changeTime": "2018-05-02T03:01:51.250Z",
       "birthTime": "2018-05-01T04:09:27.187Z",
       "root": "/",
@@ -1630,11 +1618,11 @@
       "blksize": 4194304,
       "ino": 8608390777,
       "blocks": 0,
-      "atimeMs": 1525232502686.7026,
+      "atimeMs": 1525233372485.2314,
       "mtimeMs": 1525224201605.0503,
       "ctimeMs": 1525230111250.1453,
       "birthtimeMs": 1525147767186.7222,
-      "atime": "2018-05-02T03:41:42.687Z",
+      "atime": "2018-05-02T03:56:12.485Z",
       "mtime": "2018-05-02T01:23:21.605Z",
       "ctime": "2018-05-02T03:01:51.250Z",
       "birthtime": "2018-05-01T04:09:27.187Z"
@@ -1657,7 +1645,7 @@
       "size": 6148,
       "prettySize": "6.15 kB",
       "modifiedTime": "2018-05-02T01:23:26.611Z",
-      "accessTime": "2018-05-02T03:09:31.187Z",
+      "accessTime": "2018-05-02T03:41:51.816Z",
       "changeTime": "2018-05-02T03:01:51.245Z",
       "birthTime": "2018-05-02T00:22:56.252Z",
       "root": "/",
@@ -1675,11 +1663,11 @@
       "blksize": 4194304,
       "ino": 8608390778,
       "blocks": 16,
-      "atimeMs": 1525230571186.712,
+      "atimeMs": 1525232511816.2961,
       "mtimeMs": 1525224206610.6792,
       "ctimeMs": 1525230111245.2705,
       "birthtimeMs": 1525220576252.3906,
-      "atime": "2018-05-02T03:09:31.187Z",
+      "atime": "2018-05-02T03:41:51.816Z",
       "mtime": "2018-05-02T01:23:26.611Z",
       "ctime": "2018-05-02T03:01:51.245Z",
       "birthtime": "2018-05-02T00:22:56.252Z"
@@ -1704,7 +1692,7 @@
       "size": 490461,
       "prettySize": "490 kB",
       "modifiedTime": "2018-05-02T00:57:26.881Z",
-      "accessTime": "2018-05-02T03:11:53.732Z",
+      "accessTime": "2018-05-02T03:41:51.816Z",
       "changeTime": "2018-05-02T03:01:51.246Z",
       "birthTime": "2018-05-02T00:53:14.722Z",
       "root": "/",
@@ -1722,24 +1710,14 @@
       "blksize": 4194304,
       "ino": 8608390779,
       "blocks": 960,
-      "atimeMs": 1525230713732.3652,
+      "atimeMs": 1525232511816.3555,
       "mtimeMs": 1525222646881.4548,
       "ctimeMs": 1525230111246.0298,
       "birthtimeMs": 1525222394721.8677,
-      "atime": "2018-05-02T03:11:53.732Z",
+      "atime": "2018-05-02T03:41:51.816Z",
       "mtime": "2018-05-02T00:57:26.881Z",
       "ctime": "2018-05-02T03:01:51.246Z",
       "birthtime": "2018-05-02T00:53:14.722Z"
-    },
-    "/Users/DeBeer/projects/football-database/src/assets/images/pl.jpg absPath of file >> ImageSharp": {
-      "id": "/Users/DeBeer/projects/football-database/src/assets/images/pl.jpg absPath of file >> ImageSharp",
-      "children": [],
-      "parent": "/Users/DeBeer/projects/football-database/src/assets/images/pl.jpg absPath of file",
-      "internal": {
-        "contentDigest": "a5c716a6c55cff8b8062051f1a84db1a",
-        "type": "ImageSharp",
-        "owner": "gatsby-transformer-sharp"
-      }
     },
     "/Users/DeBeer/projects/football-database/src/assets/images/bg.jpg absPath of file": {
       "id": "/Users/DeBeer/projects/football-database/src/assets/images/bg.jpg absPath of file",
@@ -1761,7 +1739,7 @@
       "size": 532418,
       "prettySize": "532 kB",
       "modifiedTime": "2018-05-02T00:26:28.891Z",
-      "accessTime": "2018-05-02T03:11:53.732Z",
+      "accessTime": "2018-05-02T03:41:51.816Z",
       "changeTime": "2018-05-02T03:01:51.250Z",
       "birthTime": "2018-05-02T00:21:20.706Z",
       "root": "/",
@@ -1779,14 +1757,24 @@
       "blksize": 4194304,
       "ino": 8608390782,
       "blocks": 1040,
-      "atimeMs": 1525230713732.2341,
+      "atimeMs": 1525232511816.3152,
       "mtimeMs": 1525220788890.743,
       "ctimeMs": 1525230111250.0251,
       "birthtimeMs": 1525220480706.033,
-      "atime": "2018-05-02T03:11:53.732Z",
+      "atime": "2018-05-02T03:41:51.816Z",
       "mtime": "2018-05-02T00:26:28.891Z",
       "ctime": "2018-05-02T03:01:51.250Z",
       "birthtime": "2018-05-02T00:21:20.706Z"
+    },
+    "/Users/DeBeer/projects/football-database/src/assets/images/pl.jpg absPath of file >> ImageSharp": {
+      "id": "/Users/DeBeer/projects/football-database/src/assets/images/pl.jpg absPath of file >> ImageSharp",
+      "children": [],
+      "parent": "/Users/DeBeer/projects/football-database/src/assets/images/pl.jpg absPath of file",
+      "internal": {
+        "contentDigest": "a5c716a6c55cff8b8062051f1a84db1a",
+        "type": "ImageSharp",
+        "owner": "gatsby-transformer-sharp"
+      }
     },
     "/Users/DeBeer/projects/football-database/src/assets/images/bg.jpg absPath of file >> ImageSharp": {
       "id": "/Users/DeBeer/projects/football-database/src/assets/images/bg.jpg absPath of file >> ImageSharp",
@@ -1818,7 +1806,7 @@
       "size": 181809,
       "prettySize": "182 kB",
       "modifiedTime": "2018-05-02T01:22:58.872Z",
-      "accessTime": "2018-05-02T03:11:53.732Z",
+      "accessTime": "2018-05-02T03:41:43.544Z",
       "changeTime": "2018-05-02T03:01:51.248Z",
       "birthTime": "2018-05-02T01:22:58.241Z",
       "root": "/",
@@ -1836,11 +1824,11 @@
       "blksize": 4194304,
       "ino": 8608390781,
       "blocks": 360,
-      "atimeMs": 1525230713732.3147,
+      "atimeMs": 1525232503543.595,
       "mtimeMs": 1525224178872.1167,
       "ctimeMs": 1525230111248.3066,
       "birthtimeMs": 1525224178241.3367,
-      "atime": "2018-05-02T03:11:53.732Z",
+      "atime": "2018-05-02T03:41:43.544Z",
       "mtime": "2018-05-02T01:22:58.872Z",
       "ctime": "2018-05-02T03:01:51.248Z",
       "birthtime": "2018-05-02T01:22:58.241Z"
@@ -1871,7 +1859,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "0deeeadda3ab8d428a3fbdf6a35b5f39",
+        "contentDigest": "ba4b38d964925a57273a5da8d5ea000c",
         "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
@@ -1892,7 +1880,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "a36ea7ce806c1b1ac7dbce71fe375964",
+        "contentDigest": "d4b611c8b0f31298c6f9335b24a2b03d",
         "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
@@ -1913,7 +1901,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "a97cb5c5a76a8b9e28589af3b75051a9",
+        "contentDigest": "383bd3e1980d9eaeaee62f5df7299882",
         "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
@@ -1934,7 +1922,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "9e9c541f68319d7c8810a70a5cbb26f6",
+        "contentDigest": "e8ea54c3db36ea6079decff115be0f11",
         "description": "Plugin component-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -1942,7 +1930,7 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "22d0cdbee703f3487f033de3c00965f8"
+    "PLUGINS_HASH": "ca6ac9a06eda634e9c0818746bee21e6"
   },
   "componentDataDependencies": {
     "nodes": {

@@ -3,7 +3,7 @@
   "description": "Premier League Football-Database",
   "version": "1.0.0",
   "author": "Robert DeBeer",
-  "homepage": "http://rdebeer1.github.io/SocialMedium",
+  "homepage": "http://rdebeer1.github.io/Football-Database",
   "dependencies": {
     "gatsby": "^1.9.235",
     "gatsby-cli": "^1.1.51",
