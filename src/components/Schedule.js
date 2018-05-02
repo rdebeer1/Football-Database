@@ -1,64 +1,110 @@
 import React, { Component } from 'react';
-import {
-  Table,
-  TableBody,
-  TableRow,
-  TableRowColumn,
-} from 'material-ui/Table';
+import 'react-table/react-table.css'
+import ReactTable from "react-table"
 
 class Schedule extends Component {
-  render() {
-    const { leagueFixtures } = this.props
-    const styles = {
-      flex: {
-        fontFamily: 'Premier League',
-        overflow: 'scroll',
-        display: 'flex',
-        flex: 1,
-        justifyContent: 'center',
-        border: '.1px white solid',
-        marginBottom: '1vw'
-      },
-      table: {
-        fontFamily: 'Premier League',
-        fontSize: '1vw',
-        backgroundColor: 'transparent',
-        display: 'flex',
-        flex: 1,
-      },
-      font: {
-        height: '2vw',
-        color: 'white',
-        fontSize: '1.5vw',
-        textAlign: 'center',
-        textOverflow: 'none',
-        whiteSpace: 'no-wrap',
-      },
-      match: {
-        color: '#fff',
-        height: '2vw'
+
+  getTrProps = (state, row, instance) => {
+    if (row) {
+      return {
+        style: {
+          background: '#fff',
+          borderColor: 'transparent',
+        }
       }
     }
-    const fixtures = leagueFixtures.map((game, key) => {
-      return (
-        <TableRow displayBorder={false} style={styles.match} key={'game_' + key}>
-          <TableRowColumn style={styles.font}>@{game.awayTeamName}</TableRowColumn>
-          <TableRowColumn style={styles.font}>v.</TableRowColumn>
-          <TableRowColumn style={styles.font}>{game.homeTeamName}</TableRowColumn>
-          <TableRowColumn style={styles.font}>{game.result.goalsAwayTeam}</TableRowColumn>
-          <TableRowColumn style={styles.font}>:</TableRowColumn>
-          <TableRowColumn style={styles.font}>{game.result.goalsHomeTeam}</TableRowColumn>
-        </TableRow>
-      );
-    })
+    return {}
+  }
+  getTheadGroupProps = () => {
+    return {
+      style: {
+        color: '#fff',
+        fontSize: '1.2em',
+        background: 'transparent',
+        borderColor: 'transparent'
+      }
+    }
+  }
+  getTheadThProps = () => {
+    return {
+      style: {
+        borderColor: 'transparent'
+      }
+    }
+  }
+  getTdProps = () => {
+    return {
+      style: {
+        borderColor: 'transparent'
+      }
+    }
+  }
+  getTheadTrProps = () => {
+    return {
+      style: {
+        boxShadow: 'none',
+        borderColor: 'transparent'
+      }
+    }
+  }
+  render() {
+    
+    const { leagueFixtures } = this.props
 
     return (
-      <div style={styles.flex}>
-        <Table style={styles.table} selectable={false}>
-          <TableBody displayRowCheckbox={false}>
-          {fixtures}
-          </TableBody>
-        </Table>
+      <div>
+        <ReactTable
+          style={{ textAlign: 'center', color: '#242424', borderColor: 'transparent' }}
+          showPagination={false}
+          data={leagueFixtures}
+          columns={[
+            {
+              Header: 'Away',
+              columns: [
+                {
+                  Header: '',
+                  id: 'awayTeamName',
+                  accessor: d => d.awayTeamName
+                },
+              ]
+            },
+            {
+              Header: 'Results',
+              columns: [
+                {
+                  Header: '',
+                  id: 'result.goalsAwayTeam',
+                  accessor: d => d.result.goalsAwayTeam
+                },
+                {
+                  Header: '',
+                  id: 'result.goalsHomeTeam',
+                  accessor: d => d.result.goalsHomeTeam
+                },
+              ]
+            },
+            {
+              Header: 'Home',
+              columns: [
+                {
+                  Header: '',
+                  id: 'homeTeamName',
+                  accessor: d => d.homeTeamName
+                },
+              ]
+            },
+          ]}
+          defaultPageSize={10}
+          getTrProps={this.getTrProps}
+          getTheadGroupProps={this.getTheadGroupProps}
+          getTdProps={this.getTdProps}
+          getTheadThProps={this.getTheadThProps}
+          getTheadGroupTrProps={this.getTheadGroupProps}
+          getTheadGroupThProps={this.getTheadGroupProps}
+          getProps={this.getTdProps}
+          getTheadProps={this.getTheadTrProps}
+        />
+
       </div>
     )
   }

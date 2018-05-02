@@ -17,7 +17,7 @@ class Title extends Component {
     }
 
     return (
-      <div style={styles.container}>
+      <div>
         {leagueCaption}
       </div>
     )
