@@ -24,10 +24,10 @@ class TeamFixtures extends Component {
                 <th style={{ textAlign: 'center' }}>Away</th>
               </tr>
               <tr style={{ dispaly: 'block' }} key={fix.date + i}>
-                <td style={{ flex: '100 0 auto', overflow: 'hidden' }}>{fix.homeTeamName}</td>
-                <td style={{ fontWeight: 'bold', color: 'white', backgroundColor: '#38003c', flex: '100 0 auto', overflow: 'hidden' }}>{fix.result.goalsHomeTeam}</td>
-                <td style={{ fontWeight: 'bold', color: 'white', backgroundColor: '#38003c', flex: '100 0 auto', overflow: 'hidden' }}>{fix.result.goalsAwayTeam}</td>
-                <td style={{ flex: '100 0 auto', overflow: 'hidden' }}>{fix.awayTeamName}</td>
+                <td style={{ width: '50%', overflow: 'hidden' }}>{fix.homeTeamName}</td>
+                <td style={{ fontWeight: 'bold', color: 'white', backgroundColor: '#38003c',  overflow: 'hidden' }}>{fix.result.goalsHomeTeam}</td>
+                <td style={{ fontWeight: 'bold', color: 'white', backgroundColor: '#38003c',  overflow: 'hidden' }}>{fix.result.goalsAwayTeam}</td>
+                <td style={{ width: '50%', overflow: 'hidden' }}>{fix.awayTeamName}</td>
               </tr>
             </tbody>
           </table>
@@ -39,7 +39,7 @@ class TeamFixtures extends Component {
       if ((fix.matchday > matchday) && fix.matchday < matchday + 2) {
         let d = new Date(fix.date);
         let nextDate = dayNames[d.getDay()] + ' ' + d.getDate() + ' ' + monthNames[d.getMonth()] + ' ' + d.getFullYear();
-        let time = d.getHours() + ':' + d.getMinutes();
+        let time = d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
         return (
           <table style={{ flex: '100 0 auto', flexDirection: 'column', textAlign: 'center'}} key={fix.date + i}>
             <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold'}}><span style={{ fontWeight: 'bold' }}>Next Fixture </span>- {nextDate}</caption>
@@ -50,9 +50,9 @@ class TeamFixtures extends Component {
                 <th style={{textAlign: 'center' }}>Away</th>
               </tr>
               < tr style={{dispaly: 'block'}} >
-                <td style={{ flex: '100 0 auto', overflow: 'hidden' }}>{fix.homeTeamName}</td>
+                <td style={{ width: '50%', overflow: 'hidden' }}>{fix.homeTeamName}</td>
                 <td style={{ flex: '100 0 auto', overflow: 'hidden', fontWeight: 'bold', color: 'white', backgroundColor: '#76766f' }}>{time}</td>
-                <td style={{ flex: '100 0 auto', overflow: 'hidden' }}>{fix.awayTeamName}</td>
+                <td style={{ width: '50%', overflow: 'hidden' }}>{fix.awayTeamName}</td>
               </tr>
             </tbody>
           </table>
