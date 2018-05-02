@@ -4,7 +4,7 @@ module.exports = {
     author: "Robert DeBeer",
     description: "Premier League Football-Database"
   },
-  pathPrefix: '/',
+  pathPrefix: '/Football-Database',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
