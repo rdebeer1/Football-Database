@@ -43,6 +43,7 @@ class TableStandings extends Component {
         flex: '100 0 auto',
         width: '30px',
         height: '30px',
+        cursor: 'pointer'
       },
     }
 
