@@ -29,8 +29,8 @@
       "path---index-662a383ce50454e2db12.js.map"
     ],
     "path---hello-world": [
-      "path---hello-world-b02e539954cad214a924.js",
-      "path---hello-world-b02e539954cad214a924.js.map"
+      "path---hello-world-6d745198ab57b5a84703.js",
+      "path---hello-world-6d745198ab57b5a84703.js.map"
     ],
     "commons": [
       "commons-c03282e9a85a1fe2e833.js",
@@ -39,9 +39,9 @@
       "build-js-styles.css.map"
     ],
     "app": [
-      "app-5257dccfbf839e43f57d.js",
+      "app-b86407edb89208f836d4.js",
       "build-js-styles.css",
-      "app-5257dccfbf839e43f57d.js.map",
+      "app-b86407edb89208f836d4.js.map",
       "build-js-styles.css.map"
     ]
   }

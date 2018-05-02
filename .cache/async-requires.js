@@ -8,9 +8,9 @@ exports.components = {
 
 exports.json = {
   "layout-index.json": require("gatsby-module-loader?name=path---!/Users/DeBeer/projects/football-database/.cache/json/layout-index.json"),
+  "my-second-post.json": require("gatsby-module-loader?name=path---my-second-post!/Users/DeBeer/projects/football-database/.cache/json/my-second-post.json"),
   "hello-world.json": require("gatsby-module-loader?name=path---hello-world!/Users/DeBeer/projects/football-database/.cache/json/hello-world.json"),
   "hi-folks.json": require("gatsby-module-loader?name=path---hi-folks!/Users/DeBeer/projects/football-database/.cache/json/hi-folks.json"),
-  "my-second-post.json": require("gatsby-module-loader?name=path---my-second-post!/Users/DeBeer/projects/football-database/.cache/json/my-second-post.json"),
   "index.json": require("gatsby-module-loader?name=path---index!/Users/DeBeer/projects/football-database/.cache/json/index.json")
 }
 

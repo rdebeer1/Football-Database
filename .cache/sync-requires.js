@@ -13,8 +13,8 @@ exports.components = {
 
 exports.json = {
   "layout-index.json": require("/Users/DeBeer/projects/football-database/.cache/json/layout-index.json"),
+  "my-second-post.json": require("/Users/DeBeer/projects/football-database/.cache/json/my-second-post.json"),
   "hello-world.json": require("/Users/DeBeer/projects/football-database/.cache/json/hello-world.json"),
   "hi-folks.json": require("/Users/DeBeer/projects/football-database/.cache/json/hi-folks.json"),
-  "my-second-post.json": require("/Users/DeBeer/projects/football-database/.cache/json/my-second-post.json"),
   "index.json": require("/Users/DeBeer/projects/football-database/.cache/json/index.json")
 }
