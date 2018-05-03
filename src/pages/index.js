@@ -3,7 +3,6 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Title from '../components/Title'
-import TeamRosters from '../components/TeamRosters'
 import TableStandings from '../components/TableStandings';
 import Schedule from '../components/Schedule'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
