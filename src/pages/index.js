@@ -3,7 +3,6 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Title from '../components/Title'
-import TeamFixtures from '../components/TeamFixtures'
 import TeamRosters from '../components/TeamRosters'
 import TableStandings from '../components/TableStandings';
 import Schedule from '../components/Schedule'
@@ -59,7 +58,6 @@ class HomeIndex extends Component {
         fetch(base_url, myInit)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data.standing)
                 this.setState({
                     leagueData: data.standing,
                     leagueCaption: data.leagueCaption,
@@ -87,7 +85,6 @@ class HomeIndex extends Component {
                 this.setState({
                     teamFixtures: data.fixtures
                 });
-                console.log(this.state.teamFixtures)
             });
     }
     getTeamRosters = (url) => {
@@ -164,7 +161,6 @@ class HomeIndex extends Component {
     handleOnTeamClick = (team_base_url) => {
         let str = team_base_url
         let url = str.replace('http://', "https://", team_base_url);
-        console.log(url)
         this.setState({
             teamId: url,
         });
@@ -205,18 +201,12 @@ class HomeIndex extends Component {
                                 teamId={teamId}
                                 handleOnTeamClick={this.handleOnTeamClick}
                                 handleOpen={this.handleOpen}
-                            />
-                            <Dialog
-                                bodyStyle={{padding: 0}}
-                                actions={actions}
-                                modal={false}
-                                open={this.state.open}
-                                onRequestClose={this.handleClose}
-                                autoScrollBodyContent={true}
+                                teamFixtures={teamFixtures} 
+                                matchday={leagueMatchday}
+                                teamRosters={teamRosters}
                             >
-                            <TeamFixtures teamFixtures={teamFixtures} matchday={leagueMatchday} />
-                            <TeamRosters teamRosters={teamRosters} />
-                            </Dialog>
+                            </TableStandings>
+                            
                         </section>
 
                         <section id="two">

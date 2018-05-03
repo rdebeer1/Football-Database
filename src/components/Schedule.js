@@ -18,6 +18,7 @@ class Schedule extends Component {
   getTheadGroupProps = () => {
     return {
       style: {
+        textShadow: '-.5px -.5px 0 #38003c, .5px -.5px 0 #38003c, -.5px .5px 0 #38003c, .5px .5px 0 #38003c',
         color: '#fff',
         fontSize: '1.2em',
         background: 'transparent',
