@@ -8,7 +8,7 @@ class Header extends Component {
         const styles = {
 
             strong: {
-                color: '#ffffff',
+                color: '#fff',
                 fontWeight: '400',
             }
         }

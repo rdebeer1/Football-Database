@@ -57,7 +57,7 @@ class TableStandings extends Component {
         let recentDate = dayNames[d.getDay()] + ' ' + d.getDate() + ' ' + monthNames[d.getMonth()] + ' ' + d.getFullYear();
         return (
           <table style={{ textAlign: 'center' }} key={fix.date + i}>
-            <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold', color: '#ff015b', fontSize: '1.2em', textShadow: '-.5px -.5px 0 #fff, .5px -.5px 0 #fff, -.5px .5px 0 #fff, .5px .5px 0 #fff' }}><span style={{ fontWeight: 'bold', color: '#ff015b', textShadow: '-.5px -.5px 0 #fff, .5px -.5px 0 #fff, -.5px .5px 0 #fff, .5px .5px 0 #fff' }}>Recent Result</span> - {recentDate}</caption>
+            <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold', color: '#fff', fontSize: '1.2em', textShadow: '-.5px -.5px 0 #ff015b, .5px -.5px 0 #ff015b, -.5px .5px 0 #ff015b, .5px .5px 0 #ff015b' }}><span style={{ fontWeight: 'bold', color: '#fff', textShadow: '-.5px -.5px 0 #ff015b, .5px -.5px 0 #ff015b, -.5px .5px 0 #ff015b, .5px .5px 0 #ff015b' }}>Recent Result</span> - {recentDate}</caption>
             <tbody>
               <tr style={{display: 'flex'}}>
                 <td style={{ flex: 1, textAlign: 'center', color: '#38003c' }}>{fix.homeTeamName}</td>
@@ -79,7 +79,7 @@ class TableStandings extends Component {
         let time = d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
         return (
           <table style={{ textAlign: 'center' }} key={fix.date + i}>
-            <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold', color: '#ff015b', fontSize: '1.2em', textShadow: '-.5px -.5px 0 #fff, .5px -.5px 0 #fff, -.5px .5px 0 #fff, .5px .5px 0 #fff' }}><span style={{ fontWeight: 'bold', color: '#ff015b', textShadow: '-.5px -.5px 0 #fff, .5px -.5px 0 #fff, -.5px .5px 0 #fff, .5px .5px 0 #fff' }}>Next Fixture </span>- {nextDate}</caption>
+            <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold', color: '#fff', fontSize: '1.2em', textShadow: '-.5px -.5px 0 #ff015b, .5px -.5px 0 #ff015b, -.5px .5px 0 #ff015b, .5px .5px 0 #ff015b' }}><span style={{ fontWeight: 'bold', color: '#fff', textShadow: '-.5px -.5px 0 #ff015b, .5px -.5px 0 #ff015b, -.5px .5px 0 #ff015b, .5px .5px 0 #ff015b' }}>Next Fixture </span>- {nextDate}</caption>
             <tbody>
               <tr style={{ display: 'flex' }}>
                 <td style={{ flex: 1, textAlign: 'center', color: '#38003c' }}>{fix.homeTeamName}</td>
@@ -176,7 +176,7 @@ class TableStandings extends Component {
                 <div style={{ flex: 1 }}> {nextFixture}</div>
                 <div style={{ flex: 1 }}>
                   <table style={{ textAlign: 'center', background: 'transparent'}}>
-                    <caption style={{ flex: '100 0 auto', marginTop: '5px', paddingBottom: '20px', fontWeight: 'bold', color: '#ff015b', borderBottom: '2px solid #fff', fontSize: '1.2em', textShadow: '-.5px -.5px 0 #fff, .5px -.5px 0 #fff, -.5px .5px 0 #fff, .5px .5px 0 #fff' }}>Squad</caption>
+                    <caption style={{ flex: '100 0 auto', marginTop: '5px', paddingBottom: '20px', fontWeight: 'bold', color: '#fff', borderBottom: '2px solid #fff', fontSize: '1.2em', textShadow: '-.5px -.5px 0 #ff015b, .5px -.5px 0 #ff015b, -.5px .5px 0 #ff015b, .5px .5px 0 #ff015b' }}>Squad</caption>
                     <tbody style={{borderBottom: 0, borderTop: 0}}>
                       {players}
                     </tbody>
