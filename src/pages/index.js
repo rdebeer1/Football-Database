@@ -82,6 +82,7 @@ class HomeIndex extends Component {
         fetch(https, myInit)
             .then((res) => res.json())
             .then((data) => {
+                console.log(data)
                 this.setState({
                     teamFixtures: data.fixtures
                 });
