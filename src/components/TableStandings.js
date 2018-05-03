@@ -89,7 +89,7 @@ class TableStandings extends Component {
     });
 
     const nextFixture = teamFixtures.map((fix, i) => {
-      if ((fix.matchday > matchday -1 ) && fix.matchday < matchday + 1 && fix.status !== "FINISHED") {
+      if ((fix.matchday > matchday - 1 ) && fix.matchday < matchday + 1 && fix.status !== "FINISHED") {
         let d = new Date(fix.date);
         let nextDate = dayNames[d.getDay()] + ' ' + d.getDate() + ' ' + monthNames[d.getMonth()] + ' ' + d.getFullYear();
         let time = d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
@@ -105,7 +105,7 @@ class TableStandings extends Component {
             </tbody>
           </table>
         );
-      } else if ((fix.matchday > matchday -1) && fix.matchday < matchday ) {
+      } else if ((fix.matchday > matchday ) && fix.matchday < matchday + 1 ) {
         let d = new Date(fix.date);
         let nextDate = dayNames[d.getDay()] + ' ' + d.getDate() + ' ' + monthNames[d.getMonth()] + ' ' + d.getFullYear();
         let time = d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
