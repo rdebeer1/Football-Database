@@ -124,6 +124,7 @@ class HomeIndex extends Component {
         fetch(base_url, myInit)
             .then((res) => res.json())
             .then((data) => {
+                console.log(data)
                 let currentMatchday = []
                 let awayTeamName = []
                 let homeTeamName = []
