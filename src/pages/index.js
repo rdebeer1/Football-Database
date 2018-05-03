@@ -211,6 +211,7 @@ class HomeIndex extends Component {
                                 open={this.state.open}
                                 onRequestClose={this.handleClose}              
                                 autoScrollBodyContent={true}
+                                bodyStyle={{ backgroundColor: '#38003c', borderColor: '#38003c' }}
                             >
                                 <TeamRosters teamRosters={teamRosters} />
                             </Dialog>
