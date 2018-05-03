@@ -70,14 +70,18 @@ class Schedule extends Component {
               ]
             },
             {
-              Header: 'Results',
+              Header: 'Score',
               columns: [
                 {
+                  width: 50,
                   Header: '',
+                  style: { fontWeight: 'bold', color: '#fff', background: '#38003c' },
                   id: 'result.goalsAwayTeam',
                   accessor: d => d.result.goalsAwayTeam
                 },
                 {
+                  width: 50,
+                  style: { fontWeight: 'bold', color: '#fff', background:'#38003c'},
                   Header: '',
                   id: 'result.goalsHomeTeam',
                   accessor: d => d.result.goalsHomeTeam

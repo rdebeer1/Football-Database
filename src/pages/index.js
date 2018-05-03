@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Title from '../components/Title'
 import TableStandings from '../components/TableStandings';
+import TeamRosters from '../components/TeamRosters';
 import Schedule from '../components/Schedule'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Dialog from 'material-ui/Dialog';
@@ -202,13 +203,20 @@ class HomeIndex extends Component {
                                 handleOpen={this.handleOpen}
                                 teamFixtures={teamFixtures} 
                                 matchday={leagueMatchday}
-                                teamRosters={teamRosters}
                             >
                             </TableStandings>
-                            
+                            <Dialog
+                                actions={actions}
+                                modal={false}
+                                open={this.state.open}
+                                onRequestClose={this.handleClose}              
+                                autoScrollBodyContent={true}
+                            >
+                                <TeamRosters teamRosters={teamRosters} />
+                            </Dialog>
                         </section>
 
-                        <section id="two">
+                        <section id="two" >
                             <Schedule leagueFixtures={leagueFixtures} />
                         </section>
 
