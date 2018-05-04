@@ -47,16 +47,16 @@ class TableStandings extends Component {
         cursor: 'pointer'
       },
     }
-
+    const index = 0
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     const recentFixture = teamFixtures.map((fix, i) => {
-      if ((fix.matchday > matchday - 1) && fix.matchday < matchday + 1 && fix.status === ('FINISHED' || 'POSTPONED') ) {
+      if ((fix.matchday === matchday && fix.status === 'FINISHED') || (fix.matchday === (matchday - 1))) {
         let d = new Date(fix.date);
         let recentDate = dayNames[d.getDay()] + ' ' + d.getDate() + ' ' + monthNames[d.getMonth()] + ' ' + d.getFullYear();
         return (
           <table style={{ textAlign: 'center' }} key={fix.date + i}>
-            <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold', color: '#fff', fontSize: '1.2em' }}><span style={{ fontWeight: 'bold', color: '#fff' }}>Recent Result</span> - {recentDate}</caption>
+            <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold', color: '#fff', fontSize: '1.2em' }}>{recentDate}</caption>
             <tbody>
               <tr style={{display: 'flex'}}>
                 <td style={{ flex: 1, textAlign: 'center', color: '#38003c' }}>{fix.homeTeamName}</td>
@@ -67,34 +67,18 @@ class TableStandings extends Component {
             </tbody>
           </table>
         );
-      } else if ((fix.matchday > matchday -2 ) && fix.matchday < matchday ){
-        let d = new Date(fix.date);
-        let recentDate = dayNames[d.getDay()] + ' ' + d.getDate() + ' ' + monthNames[d.getMonth()] + ' ' + d.getFullYear();
-        return (
-          <table style={{ textAlign: 'center' }} key={fix.date + i}>
-            <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold', color: '#fff', fontSize: '1.2em' }}><span style={{ fontWeight: 'bold', color: '#fff' }}>Recent Result</span> - {recentDate}</caption>
-            <tbody>
-              <tr style={{display: 'flex'}}>
-                <td style={{ flex: 1, textAlign: 'center', color: '#38003c' }}>{fix.homeTeamName}</td>
-                <td style={{ fontWeight: 'bold', color: '#fff', backgroundColor: '#38003c', textAlign: 'center' }}>{fix.result.goalsHomeTeam}</td>
-                <td style={{ fontWeight: 'bold', color: '#fff', backgroundColor: '#38003c', textAlign: 'center' }}>{fix.result.goalsAwayTeam}</td>
-                <td style={{ flex: 1, textAlign: 'center', color: '#38003c' }}>{fix.awayTeamName}</td>
-              </tr>
-            </tbody>
-          </table>
-        );
-      }
-      return recentFixture;
+      } 
+      return recentFixture
     });
-
+    console.log(recentFixture)
     const nextFixture = teamFixtures.map((fix, i) => {
-      if ((fix.matchday > matchday - 1 ) && fix.matchday < matchday + 1 && fix.status !== "FINISHED") {
+      if ((fix.matchday === matchday && fix.status === "TIMED") || (fix.matchday === (matchday + 1))) {
         let d = new Date(fix.date);
         let nextDate = dayNames[d.getDay()] + ' ' + d.getDate() + ' ' + monthNames[d.getMonth()] + ' ' + d.getFullYear();
         let time = d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
         return (
           <table style={{ textAlign: 'center' }} key={fix.date + i}>
-            <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold', color: '#fff', fontSize: '1.2em' }}><span style={{ fontWeight: 'bold', color: '#fff' }}>Next Fixture </span>- {nextDate}</caption>
+            <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold', color: '#fff', fontSize: '1.2em' }}>{nextDate}</caption>
             <tbody>
               <tr style={{ display: 'flex' }}>
                 <td style={{ flex: 1, textAlign: 'center', color: '#38003c' }}>{fix.homeTeamName}</td>
@@ -104,24 +88,8 @@ class TableStandings extends Component {
             </tbody>
           </table>
         );
-      } else if ((fix.matchday > matchday ) && fix.matchday < matchday + 1 ) {
-        let d = new Date(fix.date);
-        let nextDate = dayNames[d.getDay()] + ' ' + d.getDate() + ' ' + monthNames[d.getMonth()] + ' ' + d.getFullYear();
-        let time = d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
-        return (
-          <table style={{ textAlign: 'center' }} key={fix.date + i}>
-            <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold', color: '#fff', fontSize: '1.2em' }}><span style={{ fontWeight: 'bold', color: '#fff' }}>Next Fixture </span>- {nextDate}</caption>
-            <tbody>
-              <tr style={{ display: 'flex' }}>
-                <td style={{ flex: 1, textAlign: 'center', color: '#38003c' }}>{fix.homeTeamName}</td>
-                <td style={{ textAlign: 'center', fontWeight: 'bold', color: '#fff', backgroundColor: '#76766f' }}>{time}</td>
-                <td style={{ flex: 1, textAlign: 'center', color: '#38003c' }}>{fix.awayTeamName}</td>
-              </tr>
-            </tbody>
-          </table>
-        );
-      }
-      return nextFixture;
+      } 
+      return nextFixture
     });
 
     return(
