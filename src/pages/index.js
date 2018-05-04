@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import Title from '../components/Title'
 import TableStandings from '../components/TableStandings';
+import Matchday from '../components/Matchday'
 import TeamRosters from '../components/TeamRosters';
 import Schedule from '../components/Schedule'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -11,6 +11,7 @@ import Dialog from 'material-ui/Dialog';
 import Header from '../components/Header'
 const config = require('../config');
 const key = config.MY_API_TOKEN
+const pl = require("../assets/images/pl.jpg")
 
 class HomeIndex extends Component {
     state = {
@@ -188,14 +189,18 @@ class HomeIndex extends Component {
 
         ];
         return (
+            <MuiThemeProvider>
             <div>
                     <Helmet>
                             <title>{siteTitle}</title>
                             <meta name="description" content={siteDescription} />
                     </Helmet>
-                <MuiThemeProvider>
                     <div id="main">
                         <section id="one">
+                            <div style={{ fontSize: '3em', textAlign: 'center', color: '#fff', margin: '1em', margin: 0 }}>Table</div>
+                        <Matchday matchday={leagueMatchday} />
+                        </section>
+                        <section id="two">
                             <TableStandings
                                 leagueData={leagueData}
                                 teamId={teamId}
@@ -211,22 +216,29 @@ class HomeIndex extends Component {
                                 open={this.state.open}
                                 onRequestClose={this.handleClose}              
                                 autoScrollBodyContent={true}
-                                bodyStyle={{ backgroundColor: '#38003c', borderColor: '#38003c' }}
+                                bodyStyle={{ backgroundColor: '#fff', borderColor: '#fff'}}
                             >
                                 <TeamRosters teamRosters={teamRosters} />
                             </Dialog>
                         </section>
-
+                        <section id="three">
+                        </section>
+                    </div>
+                    <div id="main" style={{ backgroundImage:'url('+pl+')'}}>
+                        <section id="one">
+                            <div style={{ fontSize: '3em', textAlign: 'center', color: '#fff', margin: '1em', margin: 0}}>Fixtures</div>
+                            <Matchday matchday={leagueMatchday} />
+                        </section>
                         <section id="two" >
                             <Schedule leagueFixtures={leagueFixtures} />
                         </section>
-
                         <section id="three">
                         </section>
 
+
                     </div>
-                    </MuiThemeProvider>
             </div>
+         </MuiThemeProvider>
         )
     }
 }

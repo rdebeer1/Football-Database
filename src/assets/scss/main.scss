@@ -901,9 +901,10 @@
 		@include vendor('flex-direction', 'column');
 		@include vendor('align-items', 'flex-end');
 		@include vendor('justify-content', 'space-between');
-		background-color:		_palette(accent2, bg);
+		// background-color:		_palette(accent2, bg);
+		background-color: #38003c;
 		background-attachment:	scroll,								fixed;
-		background-image:				url('../images/bg.jpg');
+		// background-image:				url('../images/bg.jpg');
 		background-position:	top left,							top left;
 		background-repeat:		repeat,								no-repeat;
 		background-size:		auto,								auto 100%;
@@ -992,7 +993,8 @@
 		max-width: 50em + $size-header-pad;
 		padding: ($size-header-pad * 2) $size-header-pad $size-header-pad $size-header-pad;
 		width: calc(100% - #{$size-header-width});
-		background-image: url('../images/pl.jpg');
+		background-image: url('../images/bg.jpg');
+		// background-color: #ff005a;
 
 		> section {
 			border-top: solid 2px _palette(border);

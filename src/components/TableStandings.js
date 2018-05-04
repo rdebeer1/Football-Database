@@ -26,7 +26,6 @@ class TableStandings extends Component {
   getTheadThProps = () => {
       return {
         style: {
-          textShadow: '-.5px -.5px 0 #ff015b, .5px -.5px 0 #ff015b, -.5px .5px 0 #ff015b, .5px .5px 0 #ff015b',
           color: '#fff',
           fontSize: '1.2em',
           borderColor: 'transparent'
@@ -57,7 +56,7 @@ class TableStandings extends Component {
         let recentDate = dayNames[d.getDay()] + ' ' + d.getDate() + ' ' + monthNames[d.getMonth()] + ' ' + d.getFullYear();
         return (
           <table style={{ textAlign: 'center' }} key={fix.date + i}>
-            <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold', color: '#fff', fontSize: '1.2em', textShadow: '-.5px -.5px 0 #ff015b, .5px -.5px 0 #ff015b, -.5px .5px 0 #ff015b, .5px .5px 0 #ff015b' }}><span style={{ fontWeight: 'bold', color: '#fff', textShadow: '-.5px -.5px 0 #ff015b, .5px -.5px 0 #ff015b, -.5px .5px 0 #ff015b, .5px .5px 0 #ff015b' }}>Recent Result</span> - {recentDate}</caption>
+            <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold', color: '#fff', fontSize: '1.2em' }}><span style={{ fontWeight: 'bold', color: '#fff' }}>Recent Result</span> - {recentDate}</caption>
             <tbody>
               <tr style={{display: 'flex'}}>
                 <td style={{ flex: 1, textAlign: 'center', color: '#38003c' }}>{fix.homeTeamName}</td>
@@ -73,7 +72,7 @@ class TableStandings extends Component {
         let recentDate = dayNames[d.getDay()] + ' ' + d.getDate() + ' ' + monthNames[d.getMonth()] + ' ' + d.getFullYear();
         return (
           <table style={{ textAlign: 'center' }} key={fix.date + i}>
-            <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold', color: '#fff', fontSize: '1.2em', textShadow: '-.5px -.5px 0 #ff015b, .5px -.5px 0 #ff015b, -.5px .5px 0 #ff015b, .5px .5px 0 #ff015b' }}><span style={{ fontWeight: 'bold', color: '#fff', textShadow: '-.5px -.5px 0 #ff015b, .5px -.5px 0 #ff015b, -.5px .5px 0 #ff015b, .5px .5px 0 #ff015b' }}>Recent Result</span> - {recentDate}</caption>
+            <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold', color: '#fff', fontSize: '1.2em' }}><span style={{ fontWeight: 'bold', color: '#fff' }}>Recent Result</span> - {recentDate}</caption>
             <tbody>
               <tr style={{display: 'flex'}}>
                 <td style={{ flex: 1, textAlign: 'center', color: '#38003c' }}>{fix.homeTeamName}</td>
@@ -95,7 +94,7 @@ class TableStandings extends Component {
         let time = d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
         return (
           <table style={{ textAlign: 'center' }} key={fix.date + i}>
-            <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold', color: '#fff', fontSize: '1.2em', textShadow: '-.5px -.5px 0 #ff015b, .5px -.5px 0 #ff015b, -.5px .5px 0 #ff015b, .5px .5px 0 #ff015b' }}><span style={{ fontWeight: 'bold', color: '#fff', textShadow: '-.5px -.5px 0 #ff015b, .5px -.5px 0 #ff015b, -.5px .5px 0 #ff015b, .5px .5px 0 #ff015b' }}>Next Fixture </span>- {nextDate}</caption>
+            <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold', color: '#fff', fontSize: '1.2em' }}><span style={{ fontWeight: 'bold', color: '#fff' }}>Next Fixture </span>- {nextDate}</caption>
             <tbody>
               <tr style={{ display: 'flex' }}>
                 <td style={{ flex: 1, textAlign: 'center', color: '#38003c' }}>{fix.homeTeamName}</td>
@@ -111,7 +110,7 @@ class TableStandings extends Component {
         let time = d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
         return (
           <table style={{ textAlign: 'center' }} key={fix.date + i}>
-            <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold', color: '#fff', fontSize: '1.2em', textShadow: '-.5px -.5px 0 #ff015b, .5px -.5px 0 #ff015b, -.5px .5px 0 #ff015b, .5px .5px 0 #ff015b' }}><span style={{ fontWeight: 'bold', color: '#fff', textShadow: '-.5px -.5px 0 #ff015b, .5px -.5px 0 #ff015b, -.5px .5px 0 #ff015b, .5px .5px 0 #ff015b' }}>Next Fixture </span>- {nextDate}</caption>
+            <caption style={{ flex: '100 0 auto', margin: '5px', fontWeight: 'bold', color: '#fff', fontSize: '1.2em' }}><span style={{ fontWeight: 'bold', color: '#fff' }}>Next Fixture </span>- {nextDate}</caption>
             <tbody>
               <tr style={{ display: 'flex' }}>
                 <td style={{ flex: 1, textAlign: 'center', color: '#38003c' }}>{fix.homeTeamName}</td>
@@ -127,7 +126,6 @@ class TableStandings extends Component {
 
     return(
       <div>
-        <div style={{ textAlign: 'center', fontSize: '1.5em', color: '#fff', margin: '1em', textShadow: '-.5px -.5px 0 #38003c, .5px -.5px 0 #38003c, -.5px .5px 0 #38003c, .5px .5px 0 #38003c'}}> Matchday: {matchday} </div>
         <ReactTable
           style={{ textAlign: 'center', color: '#242424', borderColor: 'transparent'}}
           showPagination={false}
@@ -201,7 +199,8 @@ class TableStandings extends Component {
           ]}
           SubComponent={row => {
             return (
-              <div style={{ padding: "20px", display: 'flex', flexDirection: 'column', backgroundImage: "url(" + overlay + ")"}}>
+              <div style={{
+                padding: "20px", display: 'flex', flexDirection: 'column', backgroundImage: 'url('+overlay+')'}}>
                 <div style={{ flex: 1 }}> {recentFixture}</div>
                 <div style={{ flex: 1 }}> {nextFixture}</div>
             </div>

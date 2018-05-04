@@ -1,32 +1,101 @@
 import React, { Component } from 'react';
+import 'react-table/react-table.css'
+import ReactTable from "react-table"
 
 class TeamRosters extends Component {
+  getTrProps = (state, row, instance) => {
+    if (row) {
+      return {
+        style: {
+          background: '#fff',
+          borderColor: 'transparent',
+        }
+      }
+    }
+    return {}
+  }
+  getTheadGroupProps = () => {
+    return {
+      style: {
+        color: '#38003c',
+        fontSize: '1.25em',
+        background: 'transparent',
+        borderColor: 'transparent'
+      }
+    }
+  }
+  getTheadThProps = () => {
+    return {
+      style: {
+        color: '#38003c',
+        fontSize: '1.2em',
+        borderColor: 'transparent'
+      }
+    }
+  }
+  getTdProps = () => {
+    return {
+      style: {
+        borderColor: 'transparent'
+      }
+    }
+  }
+  getTheadTrProps = () => {
+    return {
+      style: {
+        boxShadow: 'none',
+        borderColor: 'transparent'
+      }
+    }
+  }
   render() {
+
     const { teamRosters } = this.props
-    
-    const players = teamRosters.map((p, i) => {
-      return (
-        <tr style={{ borderBottom: '2px solid #fff', borderTop: 'none', borderColor: '#fff'}} key={p.dateOfBirth + i}>
-          <td style={{ textAlign: 'center', color: '#ff015b', fontWeight: 'bold', }}>{p.jerseyNumber || '-'}</td>
-          <td style={{ textAlign: 'center', color: '#ff015b', }}>{p.name}</td>
-          <td style={{ textAlign: 'center', color: '#ff015b' }}>{p.position}</td>
-          <td style={{ textAlign: 'center', color: '#ff015b', }}>{p.nationality}</td>
-        </tr>
-      );
-    })
-    
+
     return (
-      <div style={{display: 'flex', flexDirection: 'column'}} >
-      <div style={{flex: 1}}>
-        <table style={{ textAlign: 'center', background: 'transparent' }}>
-            <caption style={{ flex: '100 0 auto', marginTop: '5px', paddingBottom: '20px', fontWeight: 'bold', color: '#fff', borderBottom: '2px solid #fff', fontSize: '1.5em'  }}>Squad</caption>
-          <tbody style={{ borderBottom: 0, borderTop: 0, }}>
-            {players}
-          </tbody>
-        </table>
-        </div>
+      <div style={{
+        fontFamily: 'Premier League', lineHeight: '1.75em'}}>
+        <ReactTable
+          style={{ textAlign: 'center', color: '#242424', borderColor: 'transparent'}}
+          showPagination={false}
+          data={teamRosters}
+          columns={[
+              {
+                Header: '',
+                id: 'jerseyNumber',
+                accessor: d => d.jerseyNumber || '-'
+              },
+              {
+                minWidth: 150,
+                Header: 'Name',
+                id: 'name',
+                accessor: d => d.name
+              },
+              {
+                minWidth: 150,
+                Header: 'Position',
+                id: 'position',
+                accessor: d => d.position
+              },
+              {
+                minWidth: 150,
+                Header: 'Nationality',
+                id: 'nationality',
+                accessor: d => d.nationality
+              },
+          ]}
+          minRows={0}
+          getTrProps={this.getTrProps}
+          getTheadGroupProps={this.getTheadGroupProps}
+          getTdProps={this.getTdProps}
+          getTheadThProps={this.getTheadThProps}
+          getTheadGroupTrProps={this.getTheadGroupProps}
+          getTheadGroupThProps={this.getTheadGroupProps}
+          getProps={this.getTdProps}
+          getTheadProps={this.getTheadTrProps}
+        />
       </div>
-    );
+    )
   }
 }
 

@@ -18,9 +18,8 @@ class Schedule extends Component {
   getTheadGroupProps = () => {
     return {
       style: {
-        textShadow: '-.5px -.5px 0 #38003c, .5px -.5px 0 #38003c, -.5px .5px 0 #38003c, .5px .5px 0 #38003c',
         color: '#fff',
-        fontSize: '1.2em',
+        fontSize: '1em',
         background: 'transparent',
         borderColor: 'transparent'
       }
@@ -99,7 +98,7 @@ class Schedule extends Component {
               ]
             },
           ]}
-          defaultPageSize={10}
+          minRows={0}
           getTrProps={this.getTrProps}
           getTheadGroupProps={this.getTheadGroupProps}
           getTdProps={this.getTdProps}
